@@ -1,7 +1,7 @@
-# Pokedex App
+# Pokédex App
 
 
-*Pokedex en angular.js proyecto opensource para consultar la información básica de los pokémon*
+*Pokédex en angular.js proyecto opensource para consultar la información básica de los pokémon*
 
 # Objetivo
 
