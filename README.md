@@ -16,7 +16,7 @@ Si deseas contribuir sigue estos pasos:
 * Selecciona uno o mas 
 * Realiza un fork del repositorio dev
 * Realiza los cambios necesarios
-* posteriormente deberas de hacer un pull request
+* Posteriormente deberas de hacer un pull request
 * Verificaremos los cambios 
 
 si todo sale bien ya aceptaremos los cambios y lo integraremos al repositorio
