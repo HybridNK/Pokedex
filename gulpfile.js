@@ -4,7 +4,7 @@
 	var gulp = require('gulp'),
 	concat   = require('gulp-concat'),
 	uglify   = require('gulp-uglify'),
-	sass     = require('gulp-sass'),
+	stylus   = require('gulp-stylus'),
 	jshint   = require('gulp-jshint');
 /*
 * Concatenar y minificar script javascript
@@ -26,21 +26,20 @@ gulp.task('lint', function() {
 });
 
 /*
- * Compilar sass
+ * Compilar stylus
  */
-
-gulp.task('sass', function(){
-	return gulp.src('scss/*.scss')
-		.pipe(sass())
+gulp.task('stylus', function(){
+	return gulp.src('stylus/*.styl')
+		.pipe(stylus())
 		.pipe(gulp.dest('css'));
 });
 
 // Observar cambios en archivos
 gulp.task('watch', function(){
 	gulp.watch('js/source/*.js',['lint','scripts']);
-	gulp.watch('scss/*.scss',['sass']);
+	gulp.watch('stylus/*.styl',['stylus']);
 });
 
 
-gulp.task('default', ['lint', 'sass', 'scripts', 'watch']);
+gulp.task('default', ['lint', 'stylus', 'scripts', 'watch']);
 
