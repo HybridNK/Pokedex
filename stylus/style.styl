@@ -8,23 +8,23 @@ body
     width 100%
     position relative
 
-.pokedex:hover
-    transform: rotateY(180deg)
-
-.back
-    border-radius 5em
-    height 42em
-    position absolute
-    overflow hidden
-    width inherit
-    background red
-    z-index 2
-    transform rotateY(180deg)
-
 .front
     position absolute
     height inherit;
     width inherit
+
+.middle
+    transition all 1s ease-in-out
+    background lightblue
+    height 6em
+
+.open .middle
+    height 40em
+
+.open .front .panel
+    transition all .2s ease-in-out
+    visibility hidden
+    opacity 0
 
 .pokedex
     perspective 600
@@ -84,11 +84,9 @@ body
 
     .top
         border-radius 5em 5em 0 0
-        margin-bottom 6em
 
     .bottom
         border-radius 0 0 5em 5em
-        position absolute
         width inherit
         bottom 0
 
@@ -98,6 +96,7 @@ body
         position absolute
 
     .panel
+        transition all 1s ease-in-out
         background black
         border 1em solid lightblue
         border-radius 100%

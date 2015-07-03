@@ -8,23 +8,23 @@ body {
   width: 100%;
   position: relative;
 }
-.pokedex:hover {
-  transform: rotateY(180deg);
-}
-.back {
-  border-radius: 5em;
-  height: 42em;
-  position: absolute;
-  overflow: hidden;
-  width: inherit;
-  background: #f00;
-  z-index: 2;
-  transform: rotateY(180deg);
-}
 .front {
   position: absolute;
   height: inherit;
   width: inherit;
+}
+.middle {
+  transition: all 1s ease-in-out;
+  background: #add8e6;
+  height: 6em;
+}
+.open .middle {
+  height: 40em;
+}
+.open .front .panel {
+  transition: all 0.2s ease-in-out;
+  visibility: hidden;
+  opacity: 0;
 }
 .pokedex {
   perspective: 600;
@@ -84,11 +84,9 @@ body {
 }
 .pokedex .top {
   border-radius: 5em 5em 0 0;
-  margin-bottom: 6em;
 }
 .pokedex .bottom {
   border-radius: 0 0 5em 5em;
-  position: absolute;
   width: inherit;
   bottom: 0;
 }
@@ -98,6 +96,7 @@ body {
   position: absolute;
 }
 .pokedex .panel {
+  transition: all 1s ease-in-out;
   background: #000;
   border: 1em solid #add8e6;
   border-radius: 100%;
