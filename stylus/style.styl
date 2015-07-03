@@ -11,10 +11,10 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video
+    font inherit
+    font-size 100%
     margin 0
     padding 0
-    font-size 100%
-    font inherit
     vertical-align baseline
 
 body
@@ -30,98 +30,92 @@ body
 .pokebody
     background lightblue
     border-radius 10em
-    width 40em
     height 40em
     margin 0 auto
     position relative
+    width 40em
+
+    .circle-left-top,
+    .circle-right-top,
+    .circle-right-bottom,
+    .circle-left-bottom
+        border-left 1em solid transparent
+        border-right 1em solid transparent
+        display inline-block
+        height 15em
+        width 15em
+
+    .circle-right-top,
+    .circle-left-top
+        border-bottom 1em solid black
+        border-top 1em solid transparent
+
+    .circle-right-bottom,
+    .circle-left-bottom
+        border-bottom 1em solid transparent
+        border-top 1em solid black
 
     .circle-right-top
-        height 15em
-        width 15em
         border-radius 0 0 0 100%
-        border-right 1em solid transparent
-        border-left 1em solid transparent
-        border-top 1em solid transparent
-        border-bottom 1em solid black
-        display inline-block
-        margin-top -1em
         float right
+        margin-top -1em
 
     .circle-left-top
-        height 15em
-        width 15em
         border-radius 0 0 100% 0
-        border-right 1em solid transparent
-        border-left 1em solid transparent
-        border-top 1em solid transparent
-        border-bottom 1em solid black
-        display inline-block
-        margin-top -1em
         left 0em
+        margin-top -1em
 
     .circle-right-bottom
-        height 15em
-        width 15em
         border-radius 100% 0 0 0
-        border-right 1em solid transparent
-        border-left 1em solid transparent
-        border-top 1em solid black
-        border-bottom 1em solid transparent
-        display inline-block
-        margin-top 2em
         float right
+        margin-top 2em
 
     .circle-left-bottom
-        height 15em
-        width 15em
         border-radius 0 100% 0 0
-        border-right 1em solid transparent
-        border-left 1em solid transparent
-        border-top 1em solid black
-        border-bottom 1em solid transparent
-        display inline-block
-        margin-top 2em
         left 0em
+        margin-top 2em
 
+    .bottom,
     .top
         background red
-        border-radius 5em 5em 0 0
         height 45%
+
+    .top
+        border-radius 5em 5em 0 0
         margin-bottom 6em
 
     .bottom
-        background red
         border-radius 0 0 5em 5em
-        height 45%
         margin-top 6em
+
+    .panel,
+    .divisor,
+    .divisor .button
+        position absolute
 
     .panel
         background black
-        height 15em
-        width 15em
-        border-radius 100%
-        position absolute
-        bottom 10.5em
-        right 11.5em
         border 1em solid lightblue
+        border-radius 100%
+        bottom 10.5em
+        height 15em
+        right 11.5em
+        width 15em
 
     .divisor
         background lightblue
+        bottom 4.5em
         height 6em
         width 100%
-        bottom 4.5em
-        position absolute
-
 
         .button
             background #00CED1
-            height 8em
-            width 8em
-            border-radius 100%
-            position absolute
-            left 3em
-            bottom -1.5em
             border .5em solid lightblue
+            border-radius 100%
+            bottom -1.5em
+            height 8em
+            left 3em
+            width 8em
 
 
 
