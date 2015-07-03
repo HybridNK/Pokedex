@@ -25,15 +25,40 @@ body
 .container
     height 100%
     width 100%
+    position relative
 
+.pokedex:hover
+    transform: rotateY(180deg)
 
-.pokebody
+.open
+    height 60em!important
+
+.back
+  border-radius 5em
+  height 42em
+  position absolute
+  overflow hidden
+  width inherit
+  background red
+  z-index 2
+  transform rotateY(180deg)
+
+.front
+    position absolute
+    height inherit;
+    width inherit
+
+.pokedex
+    perspective 600
+    transform-style preserve-3d
+    transition all 1s ease-in-out
     background lightblue
     border-radius 10em
-    height 40em
+    height 42em
     margin 0 auto
-    position relative
+    position absolute
     width 40em
+
 
     .circle-left-top,
     .circle-right-top,
@@ -78,7 +103,7 @@ body
     .bottom,
     .top
         background red
-        height 45%
+        height 18em
 
     .top
         border-radius 5em 5em 0 0
@@ -86,7 +111,9 @@ body
 
     .bottom
         border-radius 0 0 5em 5em
-        margin-top 6em
+        position absolute
+        width inherit
+        bottom 0
 
     .panel,
     .divisor,
@@ -97,10 +124,11 @@ body
         background black
         border 1em solid lightblue
         border-radius 100%
-        bottom 10.5em
+        bottom 12.5em
         height 15em
         right 11.5em
         width 15em
+        z-index 1
 
     .divisor
         background lightblue
