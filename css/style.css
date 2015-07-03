@@ -1,90 +1,3 @@
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  font: inherit;
-  font-size: 100%;
-  margin: 0;
-  padding: 0;
-  vertical-align: baseline;
-}
 body {
   background: #fff;
   color: #000;
@@ -93,94 +6,126 @@ body {
 .container {
   height: 100%;
   width: 100%;
+  position: relative;
 }
-.pokebody {
+.pokedex:hover {
+  transform: rotateY(180deg);
+}
+.back {
+  border-radius: 5em;
+  height: 42em;
+  position: absolute;
+  overflow: hidden;
+  width: inherit;
+  background: #f00;
+  z-index: 2;
+  transform: rotateY(180deg);
+}
+.front {
+  position: absolute;
+  height: inherit;
+  width: inherit;
+}
+.pokedex {
+  perspective: 600;
+  transform-style: preserve-3d;
+  transition: all 1s ease-in-out;
   background: #add8e6;
   border-radius: 10em;
-  height: 40em;
+  height: 42em;
   margin: 0 auto;
-  position: relative;
+  position: absolute;
   width: 40em;
 }
-.pokebody .circle-left-top,
-.pokebody .circle-right-top,
-.pokebody .circle-right-bottom,
-.pokebody .circle-left-bottom {
+.pokedex .circle-left-top,
+.pokedex .circle-right-top,
+.pokedex .circle-right-bottom,
+.pokedex .circle-left-bottom {
   border-left: 1em solid transparent;
   border-right: 1em solid transparent;
   display: inline-block;
   height: 15em;
   width: 15em;
 }
-.pokebody .circle-right-top,
-.pokebody .circle-left-top {
+.pokedex .circle-right-top,
+.pokedex .circle-left-top {
   border-bottom: 1em solid #000;
   border-top: 1em solid transparent;
 }
-.pokebody .circle-right-bottom,
-.pokebody .circle-left-bottom {
+.pokedex .circle-right-bottom,
+.pokedex .circle-left-bottom {
   border-bottom: 1em solid transparent;
   border-top: 1em solid #000;
 }
-.pokebody .circle-right-top {
+.pokedex .circle-right-top {
   border-radius: 0 0 0 100%;
   float: right;
   margin-top: -1em;
 }
-.pokebody .circle-left-top {
+.pokedex .circle-left-top {
   border-radius: 0 0 100% 0;
   left: 0em;
   margin-top: -1em;
 }
-.pokebody .circle-right-bottom {
+.pokedex .circle-right-bottom {
   border-radius: 100% 0 0 0;
   float: right;
   margin-top: 2em;
 }
-.pokebody .circle-left-bottom {
+.pokedex .circle-left-bottom {
   border-radius: 0 100% 0 0;
   left: 0em;
   margin-top: 2em;
 }
-.pokebody .bottom,
-.pokebody .top {
+.pokedex .bottom,
+.pokedex .top {
   background: #f00;
-  height: 45%;
+  height: 18em;
 }
-.pokebody .top {
+.pokedex .top {
   border-radius: 5em 5em 0 0;
   margin-bottom: 6em;
 }
-.pokebody .bottom {
+.pokedex .bottom {
   border-radius: 0 0 5em 5em;
-  margin-top: 6em;
+  position: absolute;
+  width: inherit;
+  bottom: 0;
 }
-.pokebody .panel,
-.pokebody .divisor,
-.pokebody .divisor .button {
+.pokedex .panel,
+.pokedex .divisor,
+.pokedex .divisor .button {
   position: absolute;
 }
-.pokebody .panel {
+.pokedex .panel {
   background: #000;
   border: 1em solid #add8e6;
   border-radius: 100%;
-  bottom: 10.5em;
+  bottom: 12.5em;
   height: 15em;
   right: 11.5em;
   width: 15em;
+  z-index: 1;
 }
-.pokebody .divisor {
+.pokedex .divisor {
   background: #add8e6;
   bottom: 4.5em;
   height: 6em;
   width: 100%;
 }
-.pokebody .divisor .button {
+.pokedex .divisor .button {
   background: #00ced1;
   border: 0.5em solid #add8e6;
   border-radius: 100%;
-  bottom: -1.5em;
+  bottom: -1em;
   height: 8em;
-  left: 3em;
+  left: 2.8em;
   width: 8em;
+  box-shadow: 0 0.5em 0 #90b0b3;
+  cursor: pointer;
+  transition: all 0.1s linear;
+}
+.pokedex .divisor .button:active {
+  box-shadow: 0 2px 0 #8c96a6 !important;
+  transform: translateY(3px) !important;
 }
