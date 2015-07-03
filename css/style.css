@@ -20,11 +20,28 @@ body {
 }
 .open .middle {
   height: 40em;
+  overflow: hidden;
 }
 .open .front .panel {
   transition: all 0.2s ease-in-out;
   visibility: hidden;
   opacity: 0;
+}
+.open .front .middle .target {
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+  height: inherit;
+  overflow-y: scroll;
+}
+.target section {
+  border: 1px dotted #808080;
+  border-radius: 1em;
+  display: inline-block;
+  width: 5em;
+  height: 5em;
+  margin: 0.5em;
+  cursor: pointer;
+  padding: 0.5em;
 }
 .pokedex {
   perspective: 600;
@@ -79,7 +96,7 @@ body {
 }
 .pokedex .bottom,
 .pokedex .top {
-  background: #f00;
+  background: #dc143c;
   height: 18em;
 }
 .pokedex .top {
