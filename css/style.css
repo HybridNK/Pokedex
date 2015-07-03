@@ -79,10 +79,10 @@ time,
 mark,
 audio,
 video {
+  font: inherit;
+  font-size: 100%;
   margin: 0;
   padding: 0;
-  font-size: 100%;
-  font: inherit;
   vertical-align: baseline;
 }
 body {
@@ -97,95 +97,90 @@ body {
 .pokebody {
   background: #add8e6;
   border-radius: 10em;
-  width: 40em;
   height: 40em;
   margin: 0 auto;
   position: relative;
+  width: 40em;
+}
+.pokebody .circle-left-top,
+.pokebody .circle-right-top,
+.pokebody .circle-right-bottom,
+.pokebody .circle-left-bottom {
+  border-left: 1em solid transparent;
+  border-right: 1em solid transparent;
+  display: inline-block;
+  height: 15em;
+  width: 15em;
+}
+.pokebody .circle-right-top,
+.pokebody .circle-left-top {
+  border-bottom: 1em solid #000;
+  border-top: 1em solid transparent;
+}
+.pokebody .circle-right-bottom,
+.pokebody .circle-left-bottom {
+  border-bottom: 1em solid transparent;
+  border-top: 1em solid #000;
 }
 .pokebody .circle-right-top {
-  height: 15em;
-  width: 15em;
   border-radius: 0 0 0 100%;
-  border-right: 1em solid transparent;
-  border-left: 1em solid transparent;
-  border-top: 1em solid transparent;
-  border-bottom: 1em solid #000;
-  display: inline-block;
-  margin-top: -1em;
   float: right;
+  margin-top: -1em;
 }
 .pokebody .circle-left-top {
-  height: 15em;
-  width: 15em;
   border-radius: 0 0 100% 0;
-  border-right: 1em solid transparent;
-  border-left: 1em solid transparent;
-  border-top: 1em solid transparent;
-  border-bottom: 1em solid #000;
-  display: inline-block;
-  margin-top: -1em;
   left: 0em;
+  margin-top: -1em;
 }
 .pokebody .circle-right-bottom {
-  height: 15em;
-  width: 15em;
   border-radius: 100% 0 0 0;
-  border-right: 1em solid transparent;
-  border-left: 1em solid transparent;
-  border-top: 1em solid #000;
-  border-bottom: 1em solid transparent;
-  display: inline-block;
-  margin-top: 2em;
   float: right;
+  margin-top: 2em;
 }
 .pokebody .circle-left-bottom {
-  height: 15em;
-  width: 15em;
   border-radius: 0 100% 0 0;
-  border-right: 1em solid transparent;
-  border-left: 1em solid transparent;
-  border-top: 1em solid #000;
-  border-bottom: 1em solid transparent;
-  display: inline-block;
-  margin-top: 2em;
   left: 0em;
+  margin-top: 2em;
 }
+.pokebody .bottom,
 .pokebody .top {
   background: #f00;
-  border-radius: 5em 5em 0 0;
   height: 45%;
+}
+.pokebody .top {
+  border-radius: 5em 5em 0 0;
   margin-bottom: 6em;
 }
 .pokebody .bottom {
-  background: #f00;
   border-radius: 0 0 5em 5em;
-  height: 45%;
   margin-top: 6em;
+}
+.pokebody .panel,
+.pokebody .divisor,
+.pokebody .divisor .button {
+  position: absolute;
 }
 .pokebody .panel {
   background: #000;
-  height: 15em;
-  width: 15em;
-  border-radius: 100%;
-  position: absolute;
-  bottom: 10.5em;
-  right: 11.5em;
   border: 1em solid #add8e6;
+  border-radius: 100%;
+  bottom: 10.5em;
+  height: 15em;
+  right: 11.5em;
+  width: 15em;
 }
 .pokebody .divisor {
   background: #add8e6;
+  bottom: 4.5em;
   height: 6em;
   width: 100%;
-  bottom: 4.5em;
-  position: absolute;
 }
 .pokebody .divisor .button {
   background: #00ced1;
-  height: 8em;
-  width: 8em;
-  border-radius: 100%;
-  position: absolute;
-  left: 3em;
-  bottom: -1.5em;
   border: 0.5em solid #add8e6;
+  border-radius: 100%;
+  bottom: -1.5em;
+  height: 8em;
+  left: 3em;
+  width: 8em;
 }
