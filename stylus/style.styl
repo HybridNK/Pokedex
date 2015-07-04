@@ -1,5 +1,8 @@
 body
     background white
+    background-image url("../img/background.jpg")
+    background-repeat no-repeat
+    background-size cover
     color black
     font 12px Helvetica, Arial, sans-serif
 
@@ -15,11 +18,30 @@ body
 
 .middle
     transition all 1s ease-in-out
-    background lightblue
+    background rgba(15, 255, 255, 0.47)
     height 6em
+    opacity 1
+
+    section
+        border 1px solid #C0C0C0
+        background-color rgba(56, 57, 66, 0.47)
+        border-radius 1em
+        display inline-block
+        width 7em
+        height 8em
+        margin .5em
+        cursor pointer
+        padding .5em
+        text-align center
+        color white
+
+        img
+            width inherit
+            height 7em
 
 .open .middle
     height 40em
+    overflow auto
 
 .open .front .panel
     transition all .2s ease-in-out
@@ -30,11 +52,10 @@ body
     perspective 600
     transform-style preserve-3d
     transition all 1s ease-in-out
-    background lightblue
     border-radius 10em
     height 42em
     margin 0 auto
-    position absolute
+    position relative
     width 40em
 
     .circle-left-top,
@@ -79,7 +100,7 @@ body
 
     .bottom,
     .top
-        background red
+        background #DC143C
         height 18em
 
     .top
@@ -127,3 +148,16 @@ body
         .button:active
             box-shadow 0 2px 0 #8C96A6!important
             transform translateY(3px)!important
+
+::-webkit-scrollbar
+    width 1em
+
+::-webkit-scrollbar-track
+    -webkit-box-shadow 0 0 6px gray inset;
+    border-radius 5em gray solid
+
+::-webkit-scrollbar-thumb
+    border-radius 10px
+    -webkit-box-shadow inset 0 0 6px rgba(0,0,0,0.5)
+    background-color rgba(0,0,0,0.3)
+
