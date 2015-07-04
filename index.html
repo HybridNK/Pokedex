@@ -21,12 +21,11 @@
                     <div class="circle-left-top"></div>
                     <div class="circle-right-top"></div>
                 </div>
-                <div class="middle">
-                    <div class="target" ng-show="isOpen">
-                        <section ng-repeat="pkmn in pokemon" ng-click="getInfo(pkmn)">
-                            {{pkmn.id}} - {{pkmn.name}}
-                        </section>
-                    </div>
+                <div class="middle" id="scrollable">
+                    <section ng-show="isOpen" ng-repeat="pkmn in pokemon" ng-click="getInfo(pkmn)">
+                        <img src="http://www.cpokemon.com/images/pokedex/sprites/dp/pokedex/{{('000'+pkmn.id).slice(-3)}}.png" alt="">
+                         {{pkmn.id}} - {{pkmn.name | uppercase}}
+                    </section>
                 </div>
                 <div class="bottom">
                     <div class="circle-left-bottom"></div>
