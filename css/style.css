@@ -31,17 +31,20 @@ body {
   background-color: rgba(56,57,66,0.47);
   border-radius: 1em;
   display: inline-block;
-  width: 7em;
-  height: 8em;
-  margin: 0.5em;
+  width: 6em;
+  height: 6em;
+  margin: 0.25em;
   cursor: pointer;
   padding: 0.5em;
   text-align: center;
   color: #fff;
 }
 .middle section img {
-  width: inherit;
-  height: 7em;
+  width: 5em;
+  height: 5em;
+}
+.middle section p {
+  margin: 0;
 }
 .pokedex.open {
   bottom: 15em;
