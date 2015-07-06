@@ -27,8 +27,9 @@ angular.module('pokedex', [])
             'name': 'pkmn'
         }];
 
-        $scope.getInfo = function(data){
-            alert(JSON.stringify(data))
+        $scope.getInfo = function(){
+            console.log(arguments)
+            //alert(JSON.stringify(data))
         };
         $scope.open = function() {
             $scope.isOpen = true
