@@ -6,9 +6,7 @@ body {
 }
 body {
   background: #fff;
-  background-image: url("../img/background.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCI+CjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0iI2ZmZiI+PC9yZWN0Pgo8cmVjdCB3aWR0aD0iMTAiIGhlaWdodD0iMTAiIGZpbGw9IiNjY2MiPjwvcmVjdD4KPHJlY3QgeD0iMTAiIHk9IjEwIiB3aWR0aD0iMTAiIGhlaWdodD0iMTAiIGZpbGw9IiNjY2MiPjwvcmVjdD4KPC9zdmc+");
   color: #000;
   font: 12px Helvetica, Arial, sans-serif;
 }
@@ -33,17 +31,20 @@ body {
   background-color: rgba(56,57,66,0.47);
   border-radius: 1em;
   display: inline-block;
-  width: 7em;
-  height: 8em;
-  margin: 0.5em;
+  width: 6em;
+  height: 6em;
+  margin: 0.25em;
   cursor: pointer;
   padding: 0.5em;
   text-align: center;
   color: #fff;
 }
 .middle section img {
-  width: inherit;
-  height: 7em;
+  width: 5em;
+  height: 5em;
+}
+.middle section p {
+  margin: 0;
 }
 .pokedex.open {
   bottom: 15em;
@@ -129,7 +130,7 @@ body {
   background: #000;
   border: 1em solid #add8e6;
   border-radius: 100%;
-  bottom: 18.5em;
+  top: 12.5em;
   height: 15em;
   right: 11.5em;
   width: 15em;

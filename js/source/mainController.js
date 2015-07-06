@@ -30,6 +30,7 @@ angular.module('pokedex', [])
         $scope.getInfo = function(){
             console.log(arguments)
             //alert(JSON.stringify(data))
+
         };
         $scope.open = function() {
             $scope.isOpen = true

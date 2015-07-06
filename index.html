@@ -27,7 +27,9 @@
                     </div>
                     <section ng-show="isOpen" ng-repeat="pkmn in pokemon" ng-click="getInfo(pkmn)">
                         <img src="http://www.cpokemon.com/images/pokedex/sprites/dp/pokedex/{{('000'+pkmn.id).slice(-3)}}.png" alt="">
-                        {{pkmn.id}} - {{pkmn.name | uppercase}}
+                        <p>
+                            {{pkmn.id}} - {{pkmn.name | uppercase}}
+                        </p>
                     </section>
                 </div>
                 <div class="bottom">
