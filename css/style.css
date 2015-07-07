@@ -33,11 +33,11 @@ body {
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  height: 6em;
+  height: 7em;
   margin: 0.25em;
   padding: 0.5em;
   text-align: center;
-  width: 6em;
+  width: 7em;
 }
 .middle section img {
   width: 5em;
@@ -207,10 +207,54 @@ body {
 */
 .modalInformation.show {
   background: rgba(40,64,232,0.28);
-  height: 85%;
+  height: 100%;
   position: absolute;
   right: 0em;
   transition: all 0.51s ease;
   visibility: visible;
   width: 100%;
+  top: 0;
+}
+.view-animate-container {
+  height: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+.view-animate {
+  padding: 10px;
+}
+.view-animate.ng-enter {
+  transition: all 5.8s ease;
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10px;
+  color: #f00 !important;
+}
+.view-animate.ng-leave {
+  transition: all 5.8s ease;
+  display: block;
+  width: 96%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10px;
+}
+.view-animate.ng-enter {
+  left: 100%;
+}
+.view-animate.ng-leave {
+  left: -100%;
+}
+.view-animate.ng-enter.ng-enter-active {
+  left: 0;
+}
+.view-animate.ng-leave.ng-leave-active {
+  left: -100%;
 }
