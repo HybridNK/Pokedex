@@ -192,9 +192,11 @@ body
     min-height 500px
 
 .view.ng-enter,
-.view.ng-leave,
+.view.ng-leave
+    transition .5s linear all
+
 .record.ng-anchor
-    transition .15s linear all
+    transition .25s linear all
 
 .view.ng-enter
     transform translateX(100%)
@@ -206,13 +208,15 @@ body
 .view.ng-leave.ng-leave-active
     transform translateX(-100%)
 
+.record.ng-anchor-in,
 .record.ng-anchor-out,
 .record
     background-color rgba(64, 110, 148, 0.66)
     border 1px solid #c0c0c0
     border-radius 1em
-    height 6em
+    height 5em
     width 6em
+    text-align center
 
     img
         height 5em
@@ -249,6 +253,7 @@ a
     border-style none
     width 7em
     height 7em
+    text-align center
 
 .modal section img
     width 10em
