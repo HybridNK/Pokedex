@@ -1,9 +1,8 @@
-<div class="modalInformation show">
+<div class="modal">
     <button ng-click="hideInfo()">X</button>
     <div>
         <section ng-animate-ref="{{ id }}" class="record">
             <img ng-src="http://www.cpokemon.com/images/pokedex/sprites/dp/pokedex/{{('000'+id).slice(-3)}}.png" alt="">
-            <p>{{id | uppercase}}</p>
         </section>
     </div>
 </div>
