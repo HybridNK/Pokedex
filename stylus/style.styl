@@ -9,7 +9,7 @@ body
     background white
     background-image url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCI+CjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0iI2ZmZiI+PC9yZWN0Pgo8cmVjdCB3aWR0aD0iMTAiIGhlaWdodD0iMTAiIGZpbGw9IiNjY2MiPjwvcmVjdD4KPHJlY3QgeD0iMTAiIHk9IjEwIiB3aWR0aD0iMTAiIGhlaWdodD0iMTAiIGZpbGw9IiNjY2MiPjwvcmVjdD4KPC9zdmc+")
     color white
-    font 14px Helvetica, Arial, sans-serif
+    font 15px Helvetica, Arial, sans-serif
 
 .container
     height 100%
@@ -34,18 +34,19 @@ body
         color white
         cursor pointer
         display inline-block
-        height 7em
+        height 5em
         margin .55em
         padding .5em
         text-align center
-        width 7em
+        width 5em
 
         img
-            width 5em
-            height 5em
+            width 4em
+            height 4em
 
         p
             margin 0
+            font-size 8pt
 
         a
             text-decoration none
@@ -177,46 +178,79 @@ body
     border-radius 10px
 
 .view-container
-  position relative
+    position relative
+    height 100%
+
+.view
+    height inherit
 
 .view-container > .view.ng-animate
-  position absolute
-  top 0
-  left 0
-  width 100%
-  min-height 500px
+    position absolute
+    top 0
+    left 0
+    width 100%
+    min-height 500px
 
 .view.ng-enter,
 .view.ng-leave,
 .record.ng-anchor
-  transition 0.5s linear all
+    transition .15s linear all
 
 .view.ng-enter
-  transform translateX(100%)
+    transform translateX(100%)
 
 .view.ng-enter.ng-enter-active,
 .view.ng-leave
-  transform translateX(0%)
+    transform translateX(0%)
 
 .view.ng-leave.ng-leave-active
-  transform translateX(-100%)
+    transform translateX(-100%)
 
-.record.ng-anchor-out
+.record.ng-anchor-out,
+.record
     background-color rgba(64, 110, 148, 0.66)
     border 1px solid #c0c0c0
     border-radius 1em
-    color #fff
-    cursor pointer
     height 6em
-    text-align center
     width 6em
 
-.record
-    text-align center
+    img
+        height 5em
+        width 5em
 
 a
     text-decoration none
-    color white
+    color transparent
+
 
 .listar
     text-align center
+
+.pokedex .modal
+    visibility hidden
+
+.pokedex.open .modal
+    visibility visible
+    background rgba(0,0,0,.5)
+    height 100%
+
+    button
+        border-radius 100%
+        background transparent
+        width 2em
+        height 2em
+        border 1px solid white
+        float right
+        color white
+        margin .5em
+
+.modal section
+    background transparent
+    border-style none
+    width 7em
+    height 7em
+
+.modal section img
+    width 10em
+    height 10em
+    transition all .25s ease ease-out

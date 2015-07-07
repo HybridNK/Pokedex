@@ -8,7 +8,7 @@ body {
   background: #fff;
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCI+CjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0iI2ZmZiI+PC9yZWN0Pgo8cmVjdCB3aWR0aD0iMTAiIGhlaWdodD0iMTAiIGZpbGw9IiNjY2MiPjwvcmVjdD4KPHJlY3QgeD0iMTAiIHk9IjEwIiB3aWR0aD0iMTAiIGhlaWdodD0iMTAiIGZpbGw9IiNjY2MiPjwvcmVjdD4KPC9zdmc+");
   color: #fff;
-  font: 14px Helvetica, Arial, sans-serif;
+  font: 15px Helvetica, Arial, sans-serif;
 }
 .container {
   height: 100%;
@@ -33,18 +33,19 @@ body {
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  height: 7em;
+  height: 5em;
   margin: 0.55em;
   padding: 0.5em;
   text-align: center;
-  width: 7em;
+  width: 5em;
 }
 .middle section img {
-  width: 5em;
-  height: 5em;
+  width: 4em;
+  height: 4em;
 }
 .middle section p {
   margin: 0;
+  font-size: 8pt;
 }
 .middle section a {
   text-decoration: none;
@@ -177,6 +178,10 @@ body {
 }
 .view-container {
   position: relative;
+  height: 100%;
+}
+.view {
+  height: inherit;
 }
 .view-container > .view.ng-animate {
   position: absolute;
@@ -188,7 +193,7 @@ body {
 .view.ng-enter,
 .view.ng-leave,
 .record.ng-anchor {
-  transition: 0.5s linear all;
+  transition: 0.15s linear all;
 }
 .view.ng-enter {
   transform: translateX(100%);
@@ -200,23 +205,52 @@ body {
 .view.ng-leave.ng-leave-active {
   transform: translateX(-100%);
 }
-.record.ng-anchor-out {
+.record.ng-anchor-out,
+.record {
   background-color: rgba(64,110,148,0.66);
   border: 1px solid #c0c0c0;
   border-radius: 1em;
-  color: #fff;
-  cursor: pointer;
   height: 6em;
-  text-align: center;
   width: 6em;
 }
-.record {
-  text-align: center;
+.record.ng-anchor-out img,
+.record img {
+  height: 5em;
+  width: 5em;
 }
 a {
   text-decoration: none;
-  color: #fff;
+  color: transparent;
 }
 .listar {
   text-align: center;
+}
+.pokedex .modal {
+  visibility: hidden;
+}
+.pokedex.open .modal {
+  visibility: visible;
+  background: rgba(0,0,0,0.5);
+  height: 100%;
+}
+.pokedex.open .modal button {
+  border-radius: 100%;
+  background: transparent;
+  width: 2em;
+  height: 2em;
+  border: 1px solid #fff;
+  float: right;
+  color: #fff;
+  margin: 0.5em;
+}
+.modal section {
+  background: transparent;
+  border-style: none;
+  width: 7em;
+  height: 7em;
+}
+.modal section img {
+  width: 10em;
+  height: 10em;
+  transition: all 0.25s ease ease-out;
 }
