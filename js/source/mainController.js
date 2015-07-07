@@ -4,9 +4,9 @@ var app = angular.module('pokedex', ['ngRoute', 'ngAnimate'])
             var path = 'templates/';
             console.log(path)
             $routeProvider
-                .when('/obtenerInformacion/:tagId', {
+                .when('/informacion/:tagId', {
                     templateUrl: path + 'lista.html',
-                    controller: 'main'
+                    controller: 'informacion'
                 })
                 .otherwise({
                     templateUrl: path + 'home.html',
@@ -53,4 +53,8 @@ var app = angular.module('pokedex', ['ngRoute', 'ngAnimate'])
         $scope.close = function() {
             $scope.isOpen = false
         }
-    }]);
+    }])
+    .controller('informacion',['$scope','$routeParams', function($scope, $routeParams){
+        console.log($routeParams)
+        $scope.id = parseInt($routeParams.tagId,10)
+    }])
