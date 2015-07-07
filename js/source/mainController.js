@@ -1,9 +1,9 @@
-angular.module('pokedex', ["ngRoute"])
-  .config(['$routeProvider',
+var app = angular.module('pokedex', ['ngRoute', 'ngAnimate'])
+    .config(['$routeProvider',
         function($routeProvider) {
             var path = 'templates/';
             console.log(path)
-           $routeProvider
+            $routeProvider
                 .when('/obtenerInformacion/:tagId', {
                     templateUrl: path + 'lista.html',
                     controller: 'main'
@@ -14,28 +14,43 @@ angular.module('pokedex', ["ngRoute"])
                 });
         }
     ])
-    .controller('main', ['$scope','$location','$http',function($scope, $location, $http) {
+    .factory('$storage', function() {
+        return {
+            data: [],
+            set: function(index, data) {
+                this.data[index] = data;
+            },
+            get: function(index) {
+                return this.data[index] || [];
+            }
+        }
+    })
+    .controller('main', ['$scope', '$location', '$http', '$storage', function($scope, $location, $http, $storage) {
         $scope.page = 'Pokedex';
+        $scope.pokemon = $storage.get('pkmn') || [];
+        console.log($scope.pokemon)
+        if (!$scope.pokemon.length) {
+            $http.get('js/pkmn.json')
+                .success(function(data) {
+                   $storage.set('pkmn',data);
+                   $scope.pokemon = data;
+                })
+        }
+        console.log($scope.pokemon.length)
 
-        $http.get('js/pkmn.json')
-            .success(function(data){
-                console.warn(data)
-                $scope.pokemon = data;
-            })
-
-        $scope.getInfo = function(pkmn){
+        $scope.getInfo = function(pkmn) {
             $scope.showInfo = true
-            $location.path('/obtenerInformacion/'+pkmn.id);
+            $location.path('/obtenerInformacion/' + pkmn.id);
         };
+
         $scope.open = function() {
             $scope.isOpen = true
             console.warn('abriendo pokedex')
         };
-        $scope.hideInfo = function(){
-           $location.path('')
+        $scope.hideInfo = function() {
+            $location.path('')
         };
-        $scope.close = function(){
+        $scope.close = function() {
             $scope.isOpen = false
         }
     }]);
-
