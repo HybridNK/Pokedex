@@ -46,6 +46,10 @@ body {
 .middle section p {
   margin: 0;
 }
+.middle section a {
+  text-decoration: none;
+  color: #fff;
+}
 .pokedex.open {
   bottom: 15em;
 }
@@ -171,90 +175,45 @@ body {
   background-color: rgba(0,0,0,0.3);
   border-radius: 10px;
 }
-.modalInformation {
-  right: 75em;
-  transition: all 0.51s ease-in-out;
-  visibility: hidden;
+.view-container {
+  position: relative;
 }
-.modalInformation button,
-.modalInformation button:active {
-  background-color: transparent;
-  border: 1px solid #fff;
-  border-radius: 100%;
+.view-container > .view.ng-animate {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 500px;
+}
+.view.ng-enter,
+.view.ng-leave,
+.record.ng-anchor {
+  transition: 0.5s linear all;
+}
+.view.ng-enter {
+  transform: translateX(100%);
+}
+.view.ng-enter.ng-enter-active,
+.view.ng-leave {
+  transform: translateX(0%);
+}
+.view.ng-leave.ng-leave-active {
+  transform: translateX(-100%);
+}
+.record.ng-anchor-out {
+  background-color: rgba(64,110,148,0.66);
+  border: 1px solid #c0c0c0;
+  border-radius: 1em;
   color: #fff;
   cursor: pointer;
-  height: 2em;
-  margin: 0.5em;
-  position: absolute;
-  right: 0;
-  width: 2em;
+  height: 6em;
+  text-align: center;
+  width: 6em;
 }
-.modalInformation.hide {
-  background: rgba(40,64,232,0.28);
-  height: 100%;
-  position: relative;
-  right: 75em;
-  transition: all 2s cubic-bezier(0.18, -0.25, 1, -0.09);
-  visibility: hidden;
-  width: 100%;
+.record {
+  text-align: center;
 }
-/*
-    height 100%
-    right 0em
-    transition all .51s ease
-    visibility visible
-    width 100%
-*/
-.modalInformation.show {
-  background: rgba(40,64,232,0.28);
-  height: 100%;
-  position: absolute;
-  right: 0em;
-  transition: all 0.51s ease;
-  visibility: visible;
-  width: 100%;
-  top: 0;
-}
-.view-animate-container {
-  height: 100%;
-  overflow-x: hidden;
-  position: relative;
-}
-.view-animate {
-  padding: 10px;
-}
-.view-animate.ng-enter {
-  transition: all 5.8s ease;
-  display: block;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 10px;
-  color: #f00 !important;
-}
-.view-animate.ng-leave {
-  transition: all 5.8s ease;
-  display: block;
-  width: 96%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 10px;
-}
-.view-animate.ng-enter {
-  left: 100%;
-}
-.view-animate.ng-leave {
-  left: -100%;
-}
-.view-animate.ng-enter.ng-enter-active {
-  left: 0;
-}
-.view-animate.ng-leave.ng-leave-active {
-  left: -100%;
+a {
+  text-decoration: none;
+  color: #fff;
 }
