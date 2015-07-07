@@ -1,4 +1,9 @@
 <div class="modalInformation show">
     <button ng-click="hideInfo()">X</button>
-    aqui se mostrara la info del pokemon
+    <div>
+    <section ng-animate-ref="{{ pkmn.id }}">
+        <img ng-src="http://www.cpokemon.com/images/pokedex/sprites/dp/pokedex/{{('000'+pkmn.id).slice(-3)}}.png" alt="">
+        <p>{{pkmn.id | uppercase}}</p>
+    </section>
+    </div>
 </div>
