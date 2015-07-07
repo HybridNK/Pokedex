@@ -7,37 +7,37 @@ body {
 body {
   background: #fff;
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCI+CjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0iI2ZmZiI+PC9yZWN0Pgo8cmVjdCB3aWR0aD0iMTAiIGhlaWdodD0iMTAiIGZpbGw9IiNjY2MiPjwvcmVjdD4KPHJlY3QgeD0iMTAiIHk9IjEwIiB3aWR0aD0iMTAiIGhlaWdodD0iMTAiIGZpbGw9IiNjY2MiPjwvcmVjdD4KPC9zdmc+");
-  color: #000;
-  font: 12px Helvetica, Arial, sans-serif;
+  color: #fff;
+  font: 14px Helvetica, Arial, sans-serif;
 }
 .container {
   height: 100%;
-  width: 100%;
   position: relative;
+  width: 100%;
 }
 .front {
-  position: absolute;
   height: 100%;
+  position: absolute;
   width: inherit;
 }
 .middle {
-  transition: all 1s ease-in-out;
-  background: rgba(15,255,255,0.47);
+  background: rgba(15,219,255,0.47);
   height: 6em;
   opacity: 1;
+  transition: all 1s ease-in-out;
 }
 .middle section {
+  background-color: rgba(64,110,148,0.66);
   border: 1px solid #c0c0c0;
-  background-color: rgba(56,57,66,0.47);
   border-radius: 1em;
+  color: #fff;
+  cursor: pointer;
   display: inline-block;
-  width: 6em;
   height: 6em;
   margin: 0.25em;
-  cursor: pointer;
   padding: 0.5em;
   text-align: center;
-  color: #fff;
+  width: 6em;
 }
 .middle section img {
   width: 5em;
@@ -51,7 +51,8 @@ body {
 }
 .open .middle {
   height: 85%;
-  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 .open .front .panel {
   transition: all 0.2s ease-in-out;
@@ -59,13 +60,13 @@ body {
   opacity: 0;
 }
 .pokedex {
-  transition: all 1s ease-in-out;
   border-radius: 10em;
+  bottom: 0em;
   height: 100%;
   margin: 0 auto;
   position: relative;
+  transition: all 1s ease-in-out;
   width: 40em;
-  bottom: 0em;
 }
 .pokedex .circle-left-top,
 .pokedex .circle-right-top,
@@ -117,8 +118,8 @@ body {
 }
 .pokedex .bottom {
   border-radius: 0 0 5em 5em;
-  width: inherit;
   bottom: 0;
+  width: inherit;
 }
 .pokedex .panel,
 .pokedex .divisor,
@@ -126,13 +127,13 @@ body {
   position: absolute;
 }
 .pokedex .panel {
-  transition: all 1s ease-in-out;
   background: #000;
   border: 1em solid #add8e6;
   border-radius: 100%;
-  top: 12.5em;
   height: 15em;
   right: 11.5em;
+  top: 12.5em;
+  transition: all 1s ease-in-out;
   width: 15em;
   z-index: 1;
 }
@@ -147,12 +148,12 @@ body {
   border: 0.5em solid #add8e6;
   border-radius: 100%;
   bottom: -1em;
-  height: 8em;
-  left: 2.8em;
-  width: 8em;
   box-shadow: 0 0.5em 0 #90b0b3;
   cursor: pointer;
+  height: 8em;
+  left: 2.8em;
   transition: all 0.1s linear;
+  width: 8em;
 }
 .pokedex .divisor .button:active {
   box-shadow: 0 2px 0 #8c96a6 !important;
@@ -166,21 +167,50 @@ body {
   border-radius: 5em #808080 solid;
 }
 ::-webkit-scrollbar-thumb {
-  border-radius: 10px;
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
   background-color: rgba(0,0,0,0.3);
+  border-radius: 10px;
 }
 .modalInformation {
+  right: 75em;
+  transition: all 0.51s ease-in-out;
   visibility: hidden;
-  background: rgba(5,113,255,0.57);
-  width: 100%;
-  height: inherit;
-  position: absolute;
 }
-.modalInformation .active {
-  visibility: visible;
-  background: rgba(5,113,255,0.57);
-  width: 100%;
-  height: inherit;
+.modalInformation button,
+.modalInformation button:active {
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 100%;
+  color: #fff;
+  cursor: pointer;
+  height: 2em;
+  margin: 0.5em;
   position: absolute;
+  right: 0;
+  width: 2em;
+}
+.modalInformation.hide {
+  background: rgba(40,64,232,0.28);
+  height: 100%;
+  position: relative;
+  right: 75em;
+  transition: all 2s cubic-bezier(0.18, -0.25, 1, -0.09);
+  visibility: hidden;
+  width: 100%;
+}
+/*
+    height 100%
+    right 0em
+    transition all .51s ease
+    visibility visible
+    width 100%
+*/
+.modalInformation.show {
+  background: rgba(40,64,232,0.28);
+  height: 85%;
+  position: absolute;
+  right: 0em;
+  transition: all 0.51s ease;
+  visibility: visible;
+  width: 100%;
 }
