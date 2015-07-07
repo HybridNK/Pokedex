@@ -1,0 +1,6 @@
+<div class="listar" ng-hide="showInfo">
+    <section ng-show="isOpen" ng-repeat="pkmn in pokemon" ng-click="getInfo(pkmn)">
+        <img ng-src="http://www.cpokemon.com/images/pokedex/sprites/dp/pokedex/{{('000'+pkmn.id).slice(-3)}}.png" alt="">
+        <p>{{pkmn.name | uppercase}}</p>
+    </section>
+</div>
