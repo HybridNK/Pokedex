@@ -1,9 +1,9 @@
 <div class="modalInformation show">
     <button ng-click="hideInfo()">X</button>
     <div>
-    <section ng-animate-ref="{{ pkmn.id }}">
-        <img ng-src="http://www.cpokemon.com/images/pokedex/sprites/dp/pokedex/{{('000'+pkmn.id).slice(-3)}}.png" alt="">
-        <p>{{pkmn.id | uppercase}}</p>
-    </section>
+        <section ng-animate-ref="{{ id }}" class="record">
+            <img ng-src="http://www.cpokemon.com/images/pokedex/sprites/dp/pokedex/{{('000'+id).slice(-3)}}.png" alt="">
+            <p>{{id | uppercase}}</p>
+        </section>
     </div>
 </div>

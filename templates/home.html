@@ -1,6 +1,8 @@
 <div class="listar" ng-hide="showInfo">
-    <section ng-show="isOpen" ng-repeat="pkmn in pokemon" ng-click="getInfo(pkmn)" ng-animate-ref="{{ pkmn.id }}">
-        <img ng-src="http://www.cpokemon.com/images/pokedex/sprites/dp/pokedex/{{('000'+pkmn.id).slice(-3)}}.png" alt="">
-        <p>{{pkmn.name | uppercase}}</p>
+    <section ng-show="isOpen" class="record" ng-repeat="pkmn in pokemon"  ng-animate-ref="{{ pkmn.id }}">
+        <a ng-href="#/informacion/{{ pkmn.id }}">
+            <img ng-src="http://www.cpokemon.com/images/pokedex/sprites/dp/pokedex/{{('000'+pkmn.id).slice(-3)}}.png" alt="">
+            <p>{{pkmn.name | uppercase}}</p>
+        </a>
     </section>
 </div>
