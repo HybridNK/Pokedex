@@ -2,7 +2,19 @@
     <button ng-click="hideInfo()">X</button>
     <div>
         <section ng-animate-ref="{{ id }}" class="record">
-            <img ng-src="http://www.cpokemon.com/images/pokedex/sprites/dp/pokedex/{{('000'+id).slice(-3)}}.png" alt="">
+            <img ng-src="http://pokeapi.co/media/img/{{id}}.png" alt="">
         </section>
+        <article>
+            <h1>{{pkmn.national_id}}-{{pkmn.name}}</h1>
+            <label>atk: {{pkmn.attack}}</label>
+            <label>def: {{pkmn.defense}}</label>
+            <label>SP atk: {{pkmn.sp_atk}}</label>
+            <label>SP def: {{pkmn.sp_def}}</label>
+            <label>Speed: {{pkmn.speed}}</label>
+            <label>Weight: {{pkmn.weight}}</label>
+            <label ng-repeat="type in pkmn.types">
+                <p>{{type.name}}</p>
+            </label>
+        </article>
     </div>
 </div>
