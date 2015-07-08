@@ -239,7 +239,7 @@ a {
 }
 .view.ng-enter,
 .view.ng-leave {
-  transition: 1.6s linear all;
+  transition: 0.6s linear all;
 }
 .view.ng-enter {
   transform: translateX(100%);
@@ -272,7 +272,7 @@ a {
 .record.ng-anchor,
 .record.ng-anchor-in.ng-anchor,
 .record.ng-anchor-out.ng-anchor {
-  transition: 0.8s linear all;
+  transition: 0.5s linear all;
 }
 .listar {
   text-align: center;
