@@ -5,16 +5,32 @@
             <img ng-src="http://pokeapi.co/media/img/{{id}}.png" alt="">
         </section>
         <article>
-            <h1>{{pkmn.national_id}}-{{pkmn.name}}</h1>
-            <label>atk: {{pkmn.attack}}</label>
-            <label>def: {{pkmn.defense}}</label>
-            <label>SP atk: {{pkmn.sp_atk}}</label>
-            <label>SP def: {{pkmn.sp_def}}</label>
-            <label>Speed: {{pkmn.speed}}</label>
-            <label>Weight: {{pkmn.weight}}</label>
-            <label ng-repeat="type in pkmn.types">
-                <p>{{type.name}}</p>
-            </label>
+            <div class="basico">
+                <div class="line">
+                    <h3>No. {{pkmn.national_id}} {{pkmn.name}}</h3>
+                </div>
+                <div class="line">
+                    <label>ATK: </label>{{pkmn.attack}}
+                </div>
+                <div class="line">
+                    <label>DEF: </label>{{pkmn.defense}}
+                </div>
+                <div class="line">
+                    <label>SP ATK: </label>{{pkmn.sp_atk}}
+                </div>
+                <div class="line">
+                    <label>SP DEF: </label>{{pkmn.sp_def}}
+                </div>
+                <div class="line">
+                    <label>SPEED: </label>{{pkmn.speed}}
+                </div>
+                <div class="line">
+                    <label>WEIGHT: </label>{{pkmn.weight}}
+                </div>
+                <div class="line">
+                    <label>TYPES: </label><span ng-repeat="type in pkmn.types">{{type.name}}</span>
+                </div>
+            </div>
         </article>
     </div>
 </div>
