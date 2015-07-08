@@ -1,4 +1,7 @@
 var app = angular.module('pokedex', ['ngRoute', 'ngAnimate'])
+    .run(['$rootScope', function($rootScope){
+        $rootScope.isOpen = false;
+    }])
     .config(['$routeProvider',
         function($routeProvider) {
             var path = 'templates/';
@@ -27,7 +30,7 @@ var app = angular.module('pokedex', ['ngRoute', 'ngAnimate'])
     .controller('main', ['$scope', '$location', '$http', '$storage', function($scope, $location, $http, $storage) {
         $scope.page = 'Pokedex';
         $scope.pokemon = $storage.get('pkmn') || [];
-        console.log($scope.pokemon)
+
         if (!$scope.pokemon.length) {
             $http.get('js/pkmn.json')
                 .success(function(data) {
@@ -35,28 +38,23 @@ var app = angular.module('pokedex', ['ngRoute', 'ngAnimate'])
                    $scope.pokemon = data;
                 })
         }
-        console.log($scope.pokemon.length)
 
         $scope.getInfo = function(pkmn) {
             $scope.showInfo = true
             $location.path('/obtenerInformacion/' + pkmn.id);
         };
 
-        $scope.open = function() {
-            $scope.isOpen = true
-            console.warn('abriendo pokedex')
-        };
-        $scope.hideInfo = function() {
-            $location.path('')
-        };
         $scope.close = function() {
             $scope.isOpen = false
         }
 
+        $scope.hideInfo = function() {
+            $location.path('')
+        };
+
+
     }])
     .controller('informacion',['$scope','$routeParams', function($scope, $routeParams){
-        console.log($routeParams)
-            $scope.isOpen = true;
-
+        $scope.isOpen = true;
         $scope.id = parseInt($routeParams.tagId,10)
     }])

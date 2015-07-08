@@ -1,32 +1,33 @@
-
-html,
+html
 body
     margin 0px
     height 100%
     overflow hidden
-
 body
     background white
     background-image url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCI+CjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0iI2ZmZiI+PC9yZWN0Pgo8cmVjdCB3aWR0aD0iMTAiIGhlaWdodD0iMTAiIGZpbGw9IiNjY2MiPjwvcmVjdD4KPHJlY3QgeD0iMTAiIHk9IjEwIiB3aWR0aD0iMTAiIGhlaWdodD0iMTAiIGZpbGw9IiNjY2MiPjwvcmVjdD4KPC9zdmc+")
     color white
     font 15px Helvetica, Arial, sans-serif
-
+a
+    color transparent
+    text-decoration none
+border-radius()
+    -webkit-border-radius arguments
+    -moz-border-radius arguments
+    border-radius arguments
 .container
     height 100%
     position relative
     width 100%
-
 .front
     height 100%
     position absolute
     width inherit
-
 .middle
     background rgba(15, 219, 255, 0.47)
     height 6em
     opacity 1
     transition all 1s ease-in-out
-
     section
         background-color rgba(64, 110, 148, 0.66)
         border 1px solid #C0C0C0
@@ -39,32 +40,23 @@ body
         padding .5em
         text-align center
         width 5em
-
         img
             width 4em
             height 4em
-
         p
             margin 0
             font-size 8pt
-
         a
             text-decoration none
             color white
-
-.pokedex.open
-    bottom 15em
-
 .open .middle
     height 85%
     overflow-x hidden
     overflow-y auto
-
 .open .front .panel
-    transition all .2s ease-in-out
-    visibility hidden
     opacity 0
-
+    transition all .5s ease-in-out
+    visibility hidden
 .pokedex
     border-radius 10em
     bottom 0em
@@ -73,65 +65,71 @@ body
     position relative
     transition all 1s ease-in-out
     width 40em
-
-    .circle-left-top,
-    .circle-right-top,
-    .circle-right-bottom,
-    .circle-left-bottom
-        border-left 1em solid transparent
-        border-right 1em solid transparent
-        display inline-block
-        height 15em
-        width 15em
-
-    .circle-right-top,
-    .circle-left-top
-        border-bottom 1em solid black
-        border-top 1em solid transparent
-
-    .circle-right-bottom,
-    .circle-left-bottom
-        border-bottom 1em solid transparent
-        border-top 1em solid black
-
-    .circle-right-top
-        border-radius 0 0 0 100%
-        float right
-        margin-top -1em
-
-    .circle-left-top
-        border-radius 0 0 100% 0
-        left 0em
-        margin-top -1em
-
-    .circle-right-bottom
-        border-radius 100% 0 0 0
-        float right
-        margin-top 2em
-
-    .circle-left-bottom
-        border-radius 0 100% 0 0
-        left 0em
-        margin-top 2em
-
-    .bottom,
+    &.open
+        bottom 15em
+        transition all 1s ease-in-out
+        .modal
+            transition all 1s ease-in-out
+            background rgba(0,0,0,.5)
+            height inherit
+            visibility visible
+            button
+                background transparent
+                border 1px solid white
+                border-radius 100%
+                color white
+                float right
+                height 2em
+                margin .5em
+                width 2em
+    .circle
+        &-left-top
+        &-right-top
+        &-right-bottom
+        &-left-bottom
+            border-left 1em solid transparent
+            border-right 1em solid transparent
+            display inline-block
+            height 15em
+            width 15em
+        &-right-top
+        &-left-top
+            border-bottom 1em solid black
+            border-top 1em solid transparent
+        &-right-bottom
+        &-left-bottom
+            border-bottom 1em solid transparent
+            border-top 1em solid black
+        &-right-top
+            border-radius 0 0 0 100%
+            float right
+            margin-top -1em
+        &-left-top
+            border-radius 0 0 100% 0
+            left 0em
+            margin-top -1em
+        &-right-bottom
+            border-radius 100% 0 0 0
+            float right
+            margin-top 2em
+        &-left-bottom
+            border-radius 0 100% 0 0
+            left 0em
+            margin-top 2em
+    .bottom
     .top
         background #DC143C
         height 18em
-
     .top
         border-radius 5em 5em 0 0
-
     .bottom
         border-radius 0 0 5em 5em
         bottom 0
         width inherit
-
-    .panel,
-    .divisor,
+    .panel
+    .divisor
     .divisor .button
         position absolute
-
     .panel
         background black
         border 1em solid lightblue
@@ -142,13 +140,11 @@ body
         transition all 1s ease-in-out
         width 15em
         z-index 1
-
     .divisor
         background lightblue
         bottom 4.5em
         height 6em
         width 100%
-
         .button
             background #00CED1
             border .5em solid lightblue
@@ -160,97 +156,66 @@ body
             left 2.8em
             transition all .1s linear
             width 8em
-
         .button:active
             box-shadow 0 2px 0 #8C96A6!important
             transform translateY(3px)!important
-
 ::-webkit-scrollbar
     width 1em
-
 ::-webkit-scrollbar-track
     -webkit-box-shadow 0 0 6px gray inset;
     border-radius 5em gray solid
-
 ::-webkit-scrollbar-thumb
     -webkit-box-shadow inset 0 0 6px rgba(0,0,0,0.5)
     background-color rgba(0,0,0,0.3)
     border-radius 10px
-
-.view-container
-    position relative
-    height 100%
-
 .view
     height inherit
-
-.view-container > .view.ng-animate
-    position absolute
-    top 0
-    left 0
-    width 100%
-    min-height 500px
-
-.view.ng-enter,
-.view.ng-leave,
-.record.ng-anchor
-    transition .15s linear all
-
-.view.ng-enter
-    transform translateX(100%)
-
-.view.ng-enter.ng-enter-active,
-.view.ng-leave
-    transform translateX(0%)
-
-.view.ng-leave.ng-leave-active
-    transform translateX(-100%)
-
-.record.ng-anchor-out,
+    &-container
+        height 100%
+        position relative
+    &-container > &.ng-animate
+        left 0
+        min-height 500px
+        position absolute
+        top 0
+        width 100%
+    &.ng-enter
+    &.ng-leave
+        transition .5s linear all
+    &.ng-enter
+        transform translateX(100%)
+    &.ng-enter.ng-enter-active
+    &.ng-leave
+        transform translateX(0%)
+    &.ng-leave.ng-leave-active
+        transform translateX(-100%)
 .record
     background-color rgba(64, 110, 148, 0.66)
     border 1px solid #c0c0c0
     border-radius 1em
-    height 6em
+    height 5em
+    text-align center
     width 6em
-
     img
-        height 5em
-        width 5em
-
-a
-    text-decoration none
-    color transparent
-
-
+        height 6em
+        width 6em
+    &.ng-anchor-in
+    &.ng-anchor-out
+        @extend .record
+    &.ng-anchor
+        transition .1s linear all
 .listar
     text-align center
 
-.pokedex .modal
+.modal
     visibility hidden
-
-.pokedex.open .modal
-    visibility visible
-    background rgba(0,0,0,.5)
-    height 100%
-
-    button
-        border-radius 100%
+    section
         background transparent
-        width 2em
-        height 2em
-        border 1px solid white
-        float right
-        color white
-        margin .5em
-
-.modal section
-    background transparent
-    border-style none
-    width 7em
-    height 7em
-
-.modal section img
-    width 10em
-    height 10em
-    transition all .25s ease ease-out
+        border-style none
+        height 7em
+        text-align center
+        width 7em
+    section img
+        height 10em
+        transition all 50.5s ease ease-out
+        width 10em
