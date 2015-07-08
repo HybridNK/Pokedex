@@ -200,7 +200,7 @@ a {
   cursor: pointer;
   height: 8em;
   left: 2.8em;
-  transition: all 0.1s linear;
+  transition: all 0.2s linear;
   width: 8em;
 }
 .pokedex .divisor .button:active {
@@ -239,7 +239,7 @@ a {
 }
 .view.ng-enter,
 .view.ng-leave {
-  transition: 0.5s linear all;
+  transition: 1.6s linear all;
 }
 .view.ng-enter {
   transform: translateX(100%);
@@ -272,7 +272,7 @@ a {
 .record.ng-anchor,
 .record.ng-anchor-in.ng-anchor,
 .record.ng-anchor-out.ng-anchor {
-  transition: 0.1s linear all;
+  transition: 0.8s linear all;
 }
 .listar {
   text-align: center;
@@ -289,6 +289,5 @@ a {
 }
 .modal section img {
   height: 10em;
-  transition: all 50.5s ease ease-out;
   width: 10em;
 }
