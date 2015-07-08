@@ -30,7 +30,6 @@ var app = angular.module('pokedex', ['ngRoute', 'ngAnimate'])
     .controller('main', ['$scope', '$location', '$http', '$storage', function($scope, $location, $http, $storage) {
         $scope.page = 'Pokedex';
         $scope.pokemon = $storage.get('pkmn') || [];
-
         if (!$scope.pokemon.length) {
             $http.get('js/pkmn.json')
                 .success(function(data) {
@@ -38,23 +37,27 @@ var app = angular.module('pokedex', ['ngRoute', 'ngAnimate'])
                    $scope.pokemon = data;
                 })
         }
-
         $scope.getInfo = function(pkmn) {
             $scope.showInfo = true
             $location.path('/obtenerInformacion/' + pkmn.id);
         };
-
         $scope.close = function() {
             $scope.isOpen = false
         }
-
+        $scope.open = function(){
+            $scope.isOpen = true
+        }
         $scope.hideInfo = function() {
             $location.path('')
         };
-
-
     }])
-    .controller('informacion',['$scope','$routeParams', function($scope, $routeParams){
+    .controller('informacion',['$scope','$routeParams','$http', function($scope, $routeParams, $http){
         $scope.isOpen = true;
         $scope.id = parseInt($routeParams.tagId,10)
+
+        $http.get('http://pokeapi.co/api/v1/pokemon/' + $scope.id)
+                .success(function(data) {
+                   $scope.pkmn = data;
+                })
+
     }])

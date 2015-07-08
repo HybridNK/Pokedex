@@ -1,7 +1,7 @@
 <div class="listar" ng-hide="!isOpen">
-    <section class="record" ng-repeat="pkmn in pokemon"  ng-animate-ref="{{ pkmn.id }}">
+    <section class="record" ng-repeat="pkmn in pokemon" ng-animate-ref="{{ pkmn.id }}">
         <a ng-href="#/informacion/{{ pkmn.id }}">
-            <img ng-src="http://www.cpokemon.com/images/pokedex/sprites/dp/pokedex/{{('000'+pkmn.id).slice(-3)}}.png" alt="">
+            <img ng-src="http://pokeapi.co/media/img/{{pkmn.id}}.png" alt="">
             <p>{{pkmn.name | uppercase}}</p>
         </a>
     </section>
