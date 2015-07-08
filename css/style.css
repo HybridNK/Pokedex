@@ -64,7 +64,7 @@ a {
 }
 .open .front .panel {
   opacity: 0;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.5s ease-in-out;
   visibility: hidden;
 }
 .pokedex {
@@ -80,6 +80,25 @@ a {
 }
 .pokedex.open {
   bottom: 15em;
+  transition: all 1s ease-in-out;
+}
+.pokedex.open .modal {
+  transition: all 1s ease-in-out;
+  background: rgba(0,0,0,0.5);
+  height: inherit;
+  visibility: visible;
+}
+.pokedex.open .modal button {
+  background: transparent;
+  border: 1px solid #fff;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  color: #fff;
+  float: right;
+  height: 2em;
+  margin: 0.5em;
+  width: 2em;
 }
 .pokedex .circle-left-top,
 .pokedex .circle-right-top,
@@ -220,7 +239,7 @@ a {
 }
 .view.ng-enter,
 .view.ng-leave {
-  transition: 0.25s linear all;
+  transition: 0.5s linear all;
 }
 .view.ng-enter {
   transform: translateX(100%);
@@ -253,27 +272,10 @@ a {
 .record.ng-anchor,
 .record.ng-anchor-in.ng-anchor,
 .record.ng-anchor-out.ng-anchor {
-  transition: 0.25s linear all;
+  transition: 0.5s linear all;
 }
 .listar {
   text-align: center;
-}
-.pokedex.open .modal {
-  background: rgba(0,0,0,0.5);
-  height: 100%;
-  visibility: visible;
-}
-.pokedex.open .modal button {
-  background: transparent;
-  border: 1px solid #fff;
-  -webkit-border-radius: 100%;
-  -moz-border-radius: 100%;
-  border-radius: 100%;
-  color: #fff;
-  float: right;
-  height: 2em;
-  margin: 0.5em;
-  width: 2em;
 }
 .modal {
   visibility: hidden;
@@ -287,6 +289,6 @@ a {
 }
 .modal section img {
   height: 10em;
-  transition: all 0.25s ease ease-out;
+  transition: all 0.5s ease ease-out;
   width: 10em;
 }
