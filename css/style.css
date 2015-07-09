@@ -180,7 +180,6 @@ a {
   top: 12.5em;
   transition: all 1s ease-in-out;
   width: 15em;
-  z-index: 1;
 }
 .pokedex .divisor {
   background: #add8e6;
