@@ -239,7 +239,7 @@ a {
 }
 .view.ng-enter,
 .view.ng-leave {
-  transition: 0.6s linear all;
+  transition: 0.3s linear all;
 }
 .view.ng-enter {
   transform: translateX(100%);
@@ -272,7 +272,7 @@ a {
 .record.ng-anchor,
 .record.ng-anchor-in.ng-anchor,
 .record.ng-anchor-out.ng-anchor {
-  transition: 0.5s linear all;
+  transition: 0.3s linear all;
 }
 .listar {
   text-align: center;
@@ -290,4 +290,31 @@ a {
 .modal section img {
   height: 10em;
   width: 10em;
+}
+article {
+  position: relative;
+  width: inherit;
+  display: inline-block;
+  margin-left: 2em;
+}
+article .basico {
+  widows: 80%;
+  display: inherit;
+}
+article .basico .line {
+  margin: 0 auto;
+  display: flex;
+  width: 90%;
+}
+article span {
+  background: rgba(0,187,249,0.4);
+  border: 1px dotted rgba(0,187,249,0.4);
+  padding: 0 1em 0 0.8em;
+  margin: 0.2em;
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  border-radius: 1em;
+}
+article label {
+  width: 8em;
 }

@@ -45,7 +45,7 @@ var app = angular.module('pokedex', ['ngRoute', 'ngAnimate'])
             $scope.isOpen = false
         }
         $scope.open = function(){
-            $scope.isOpen = true
+            $rootScope.isOpen = true
         }
         $scope.hideInfo = function() {
             $location.path('')
@@ -56,8 +56,8 @@ var app = angular.module('pokedex', ['ngRoute', 'ngAnimate'])
         $scope.id = parseInt($routeParams.tagId,10)
 
         $http.get('http://pokeapi.co/api/v1/pokemon/' + $scope.id)
-                .success(function(data) {
-                   $scope.pkmn = data;
-                })
+            .success(function(data) {
+               $scope.pkmn = data;
+            })
 
     }])

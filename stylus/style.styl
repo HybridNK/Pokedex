@@ -181,7 +181,7 @@ border-radius()
         width 100%
     &.ng-enter
     &.ng-leave
-        transition .6s linear all
+        transition .3s linear all
     &.ng-enter
         transform translateX(100%)
     &.ng-enter.ng-enter-active
@@ -203,7 +203,7 @@ border-radius()
     &.ng-anchor-out
         @extend .record
     &.ng-anchor
-        transition .5s linear all
+        transition .3s linear all
 .listar
     text-align center
 
@@ -218,3 +218,24 @@ border-radius()
     section img
         height 10em
         width 10em
+
+article
+    position relative
+    width inherit
+    display inline-block
+    margin-left 2em
+    .basico
+        widows 80%
+        display inherit
+        .line
+            margin 0 auto
+            display flex
+            width 90%
+    span
+        background rgba(0, 187, 249, 0.4)
+        border 1px dotted rgba(0, 187, 249, 0.4)
+        padding 0 1em 0 .8em
+        margin .2em
+        border-radius 1em
+    label
+        width 8em
