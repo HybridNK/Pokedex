@@ -1,13 +1,14 @@
 /*
-* Dependencias
+ * Dependencias
 */
-	var gulp = require('gulp'),
-	concat   = require('gulp-concat'),
-	uglify   = require('gulp-uglify'),
-	stylus   = require('gulp-stylus'),
-	jshint   = require('gulp-jshint');
+    var gulp  = require('gulp'),
+    concat    = require('gulp-concat'),
+    uglify    = require('gulp-uglify'),
+    stylus    = require('gulp-stylus'),
+    jshint    = require('gulp-jshint');
+    minifyCss = require('gulp-minify-css');
 /*
-* Concatenar y minificar script javascript
+ * Concatenar y minificar script javascript
 */
 gulp.task('scripts', function () {
   gulp.src('js/source/*.js')
@@ -34,6 +35,15 @@ gulp.task('stylus', function(){
 		.pipe(gulp.dest('css'));
 });
 
+/*
+ * Minificar css
+ */
+gulp.task('minifyCss', function(){
+    return gulp.src('css/*.css')
+        .pipe(minifyCss({compatibility: 'ie8'}))
+        .pipe(gulp.dest('css'))
+});
+
 // Observar cambios en archivos
 gulp.task('watch', function(){
 	gulp.watch('js/source/*.js',['lint','scripts']);
@@ -41,5 +51,5 @@ gulp.task('watch', function(){
 });
 
 
-gulp.task('default', ['lint', 'stylus', 'scripts', 'watch']);
+gulp.task('default', ['lint', 'stylus', 'scripts', 'watch', 'minifyCss']);
 
