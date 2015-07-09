@@ -45,7 +45,7 @@ var app = angular.module('pokedex', ['ngRoute', 'ngAnimate'])
             $scope.isOpen = false
         }
         $scope.open = function(){
-            $rootScope.isOpen = true
+            $scope.isOpen = true
         }
         $scope.hideInfo = function() {
             $location.path('')
