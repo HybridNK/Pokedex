@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans)
 html
 body
     margin 0px
@@ -7,14 +8,12 @@ body
     background white
     background-image url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCI+CjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0iI2ZmZiI+PC9yZWN0Pgo8cmVjdCB3aWR0aD0iMTAiIGhlaWdodD0iMTAiIGZpbGw9IiNjY2MiPjwvcmVjdD4KPHJlY3QgeD0iMTAiIHk9IjEwIiB3aWR0aD0iMTAiIGhlaWdodD0iMTAiIGZpbGw9IiNjY2MiPjwvcmVjdD4KPC9zdmc+")
     color white
-    font 15px Helvetica, Arial, sans-serif
+    font 15px
+    font-family 'Droid Sans', sans-serif
 a
     color transparent
     text-decoration none
-border-radius()
-    -webkit-border-radius arguments
-    -moz-border-radius arguments
-    border-radius arguments
+
 .container
     height 100%
     position relative
@@ -59,116 +58,6 @@ border-radius()
     opacity 0
     transition all .5s ease-in-out
     z-index -1
-.pokedex
-    border-radius 10em
-    bottom 0em
-    height 100%
-    margin 0 auto
-    position relative
-    transition all 1s ease-in-out
-    width 40em
-    &.open
-        bottom 15em
-        transition all 1s ease-in-out
-        .modal
-            transition all 1s ease-in-out
-            background rgba(0,0,0,.5)
-            height inherit
-            visibility visible
-            button
-                background transparent
-                border 1px solid white
-                border-radius 100%
-                color white
-                float right
-                height 2em
-                margin .5em
-                width 2em
-    .circle
-        &-left-top
-        &-right-top
-        &-right-bottom
-        &-left-bottom
-            border-left 1em solid transparent
-            border-right 1em solid transparent
-            display inline-block
-            height 15em
-            width 15em
-        &-right-top
-        &-left-top
-            border-bottom 1em solid black
-            border-top 1em solid transparent
-        &-right-bottom
-        &-left-bottom
-            border-bottom 1em solid transparent
-            border-top 1em solid black
-        &-right-top
-            border-radius 0 0 0 100%
-            float right
-            margin-top -1em
-        &-left-top
-            border-radius 0 0 100% 0
-            left 0em
-            margin-top -1em
-        &-right-bottom
-            border-radius 100% 0 0 0
-            float right
-            margin-top 2em
-        &-left-bottom
-            border-radius 0 100% 0 0
-            left 0em
-            margin-top 2em
-    .bottom
-    .top
-        background #DC143C
-        height 18em
-    .top
-        border-radius 5em 5em 0 0
-    .bottom
-        border-radius 0 0 5em 5em
-        bottom 0
-        width inherit
-    .panel
-    .divisor
-    .divisor .button
-        position absolute
-    .panel
-        background black
-        border 1em solid lightblue
-        border-radius 100%
-        height 15em
-        right 11.5em
-        top 12.5em
-        transition all 1s ease-in-out
-        width 15em
-    .divisor
-        background lightblue
-        bottom 4.5em
-        height 6em
-        width 100%
-        .button
-            background #00CED1
-            border .5em solid lightblue
-            border-radius 100%
-            bottom -1em
-            box-shadow 0 .5em 0 #90B0B3
-            cursor pointer
-            height 8em
-            left 2.8em
-            transition all .2s linear
-            width 8em
-        .button:active
-            box-shadow 0 2px 0 #8C96A6!important
-            transform translateY(3px)!important
-::-webkit-scrollbar
-    width 1em
-::-webkit-scrollbar-track
-    -webkit-box-shadow 0 0 6px gray inset;
-    border-radius 5em gray solid
-::-webkit-scrollbar-thumb
-    -webkit-box-shadow inset 0 0 6px rgba(0,0,0,0.5)
-    background-color rgba(0,0,0,0.3)
-    border-radius 10px
 .view
     height inherit
     &-container
@@ -236,13 +125,43 @@ article
     width inherit
     display inline-block
     margin-left 2em
-    .basico
+    .pokemon
         widows 80%
         display inherit
         .line
             margin 0 auto
             display flex
             width 90%
+
+        &-attributes
+            display block
+            h3
+                clear both
+                color white
+                float left
+                margin 0px
+                margin-top 1.25em
+                text-transform none
+                width 100%
+            ul
+                clear both
+                float left
+                list-style none
+                width 100%
+                li
+                    border-radius .5em
+                    float left
+                    margin 0.5em .5em 0 0
+                    padding 0
+                    text-align center
+                    width 5em
+                    a
+                        color white
+                        display block
+                        float left
+                        line-height 100%
+                        padding .5em 0
+                        width 100%
     span
         background rgba(0, 187, 249, 0.4)
         border 1px dotted rgba(0, 187, 249, 0.4)
@@ -251,3 +170,17 @@ article
         border-radius 1em
     label
         width 8em
+
+::-webkit-scrollbar
+    width 1em
+::-webkit-scrollbar-track
+    -webkit-box-shadow 0 0 6px gray inset;
+    border-radius 5em gray solid
+::-webkit-scrollbar-thumb
+    -webkit-box-shadow inset 0 0 6px rgba(0,0,0,0.5)
+    background-color rgba(0,0,0,0.3)
+    border-radius 10px
+
+ @import 'mixin.styl'
+ @import 'pokedex.styl'
+ @import 'types.styl'
