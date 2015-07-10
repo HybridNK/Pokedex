@@ -188,7 +188,6 @@ article .pokemon-attributes h3 {
 }
 article .pokemon-attributes ul {
   clear: both;
-  float: left;
   list-style: none;
   width: 100%;
 }
