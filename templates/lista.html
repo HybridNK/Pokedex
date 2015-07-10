@@ -2,12 +2,12 @@
     <button ng-click="hideInfo()">X</button>
     <div>
         <section ng-animate-ref="{{ id }}" class="record">
-            <img ng-src="http://pokeapi.co/media/img/{{id}}.png" alt="">
+            <img ng-src="http://assets22.pokemon.com/assets/cms2/img/pokedex/full/{{id | tripla}}.png" alt="">
         </section>
         <article>
             <div class="basico">
                 <div class="line">
-                    <h3>No. {{pkmn.national_id}} {{pkmn.name}}</h3>
+                    <h3> {{pkmn.name}} N.º{{pkmn.national_id | tripla}}</h3>
                 </div>
                 <div class="line">
                     <label>ATK: </label>{{pkmn.attack}}

@@ -23,6 +23,8 @@ border-radius()
     height 100%
     position absolute
     width inherit
+    .panel
+        z-index 1
 .middle
     background rgba(15, 219, 255, 0.47)
     height 6em
@@ -56,7 +58,7 @@ border-radius()
 .open .front .panel
     opacity 0
     transition all .5s ease-in-out
-    visibility hidden
+    z-index -1
 .pokedex
     border-radius 10em
     bottom 0em
@@ -139,7 +141,6 @@ border-radius()
         top 12.5em
         transition all 1s ease-in-out
         width 15em
-        z-index 1
     .divisor
         background lightblue
         bottom 4.5em
@@ -197,28 +198,39 @@ border-radius()
     text-align center
     width 6em
     img
-        height 6em
-        width 6em
+        height inherit
+        width inherit
     &.ng-anchor-in
     &.ng-anchor-out
         @extend .record
+        transform rotate(360deg)
     &.ng-anchor
-        transition .3s linear all
+        transition .25s linear all
+        height 11em
+        width 11em
+        img
+            -webkit-filter blur(.25em)
+            -moz-filter blur(.25em)
+            -o-filter blur(.25em)
+            -ms-filter blur(.25em)
+            filter blur(.25em)
+            transition 1s linear all
+            height 100%
+            width 100%
+            position relative
 .listar
     text-align center
-
 .modal
     visibility hidden
     section
         background transparent
         border-style none
-        height 7em
+        height 11em
         text-align center
-        width 7em
+        width 11em
     section img
         height 10em
         width 10em
-
 article
     position relative
     width inherit
