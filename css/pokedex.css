@@ -22,10 +22,13 @@
   border: 1px solid #fff;
   border-radius: 100%;
   color: #fff;
+  cursor: pointer;
   float: right;
-  height: 2em;
+  height: 3em;
   margin: 0.5em;
-  width: 2em;
+  width: 3em;
+  position: absolute;
+  right: 0;
 }
 .pokedex .circle-left-top,
 .pokedex .circle-right-top,
@@ -116,4 +119,120 @@
 .pokedex .divisor .button:active {
   box-shadow: 0 2px 0 #8c96a6 !important;
   transform: translateY(3px) !important;
+}
+.pokedex .modal {
+  visibility: hidden;
+}
+.pokedex .modal section {
+  background: rgba(255,255,255,0.74);
+  border-radius: 2em 0em;
+  border-style: none;
+  height: 16em;
+  text-align: center;
+  width: 16em;
+}
+.pokedex .modal section img {
+  height: 15em;
+  width: 15em;
+}
+.pokedex .modal span {
+  background: rgba(0,187,249,0.4);
+  border: 1px dotted rgba(0,187,249,0.4);
+  border-radius: 1em;
+  margin: 0.2em;
+  padding: 0 1em 0 0.8em;
+}
+.pokedex .modal label {
+  width: 8em;
+}
+.pokedex .pokemon {
+  height: inherit;
+  position: absolute;
+}
+.pokedex .pokemon-description,
+.pokedex .pokemon-foto {
+  display: inline-block;
+  float: left;
+}
+.pokedex .pokemon-attributes {
+  margin: 0.5em;
+  width: 50%;
+}
+.pokedex .pokemon-attributes h3 {
+  clear: both;
+  color: #fff;
+  float: left;
+  margin: 0px;
+  margin-top: 1.25em;
+  text-transform: none;
+  width: 100%;
+}
+.pokedex .pokemon-attributes ul {
+  clear: both;
+  list-style: none;
+  width: 100%;
+}
+.pokedex .pokemon-attributes ul li {
+  border-radius: 0.5em;
+  float: left;
+  margin: 0.5em 0.5em 0 0;
+  padding: 0;
+  text-align: center;
+  width: 5em;
+}
+.pokedex .pokemon-attributes ul li a {
+  color: #fff;
+  display: block;
+  float: left;
+  line-height: 100%;
+  padding: 0.5em 0;
+  width: 100%;
+}
+.pokedex .pokemon-description {
+  margin: 0.5em;
+  width: 50%;
+  height: 18em;
+}
+.pokedex .pokemon-description p {
+  line-height: 150%;
+}
+.pokedex .pokemon-stats {
+  background-color: #a4a4a4;
+  border-radius: 10px;
+  display: block;
+  float: left;
+  margin: 0.5em;
+  width: 100%;
+/*.gauge
+                background: #fff;
+                position: relative;
+                overflow: hidden;
+          .gauge li
+                list-style none
+                background: transparent;
+                border-bottom: 0.25em solid #a4a4a4;
+                height: 0.5em;
+                width: 100%;
+                position: relative;
+                z-index: 2;*/
+}
+.pokedex .pokemon-stats>ul>li {
+  float: left;
+  margin-right: -100%;
+  width: 12.95%;
+  display: inline-block;
+  margin: 0 1.5625% 1.25em 0;
+}
+.pokedex .pokemon-stats .gauge {
+  padding: 0;
+  background: #fff;
+}
+.pokedex .pokemon-stats .gauge li {
+  list-style: none;
+  background: transparent;
+  border-bottom: 0.25em solid #a4a4a4;
+  height: 0.5em;
+  width: 100%;
+  position: relative;
+  z-index: 2;
 }
