@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Droid+Sans)
+@import url(http://fonts.googleapis.com/css?family=Rajdhani);
 html
 body
     margin 0px
@@ -9,11 +9,12 @@ body
     background-image url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCI+CjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0iI2ZmZiI+PC9yZWN0Pgo8cmVjdCB3aWR0aD0iMTAiIGhlaWdodD0iMTAiIGZpbGw9IiNjY2MiPjwvcmVjdD4KPHJlY3QgeD0iMTAiIHk9IjEwIiB3aWR0aD0iMTAiIGhlaWdodD0iMTAiIGZpbGw9IiNjY2MiPjwvcmVjdD4KPC9zdmc+")
     color white
     font 15px
-    font-family 'Droid Sans', sans-serif
+    font-family 'Rajdhani', sans-serif;
 a
     color transparent
     text-decoration none
-
+.fixedClear
+    clear both
 .container
     height 100%
     position relative
@@ -46,7 +47,7 @@ a
             height 4em
         p
             margin 0
-            font-size 8pt
+            font-size 10pt
         a
             text-decoration none
             color white
@@ -109,66 +110,7 @@ a
             position relative
 .listar
     text-align center
-.modal
-    visibility hidden
-    section
-        background transparent
-        border-style none
-        height 11em
-        text-align center
-        width 11em
-    section img
-        height 10em
-        width 10em
-article
-    position relative
-    width inherit
-    display inline-block
-    margin-left 2em
-    .pokemon
-        widows 80%
-        display inherit
-        .line
-            margin 0 auto
-            display flex
-            width 90%
 
-        &-attributes
-            display block
-            h3
-                clear both
-                color white
-                float left
-                margin 0px
-                margin-top 1.25em
-                text-transform none
-                width 100%
-            ul
-                clear both
-                list-style none
-                width 100%
-                li
-                    border-radius .5em
-                    float left
-                    margin 0.5em .5em 0 0
-                    padding 0
-                    text-align center
-                    width 5em
-                    a
-                        color white
-                        display block
-                        float left
-                        line-height 100%
-                        padding .5em 0
-                        width 100%
-    span
-        background rgba(0, 187, 249, 0.4)
-        border 1px dotted rgba(0, 187, 249, 0.4)
-        padding 0 1em 0 .8em
-        margin .2em
-        border-radius 1em
-    label
-        width 8em
 
 ::-webkit-scrollbar
     width 1em
