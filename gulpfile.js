@@ -30,7 +30,7 @@ gulp.task('lint', function() {
  * Compilar stylus
  */
 gulp.task('stylus', function(){
-	return gulp.src('stylus/*.styl')
+	return gulp.src('stylus/style.styl')
 		.pipe(stylus())
 		.pipe(gulp.dest('css'));
 });
@@ -47,7 +47,7 @@ gulp.task('minifyCss', function(){
 // Observar cambios en archivos
 gulp.task('watch', function(){
 	gulp.watch('js/source/*.js',['lint','scripts']);
-	gulp.watch('stylus/*.styl',['stylus']);
+	gulp.watch('stylus/style.styl',['stylus','minifyCss']);
 });
 
 
