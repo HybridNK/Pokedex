@@ -1,3 +1,4 @@
+@import url("http://fonts.googleapis.com/css?family=Rajdhani");
 html,
 body {
   margin: 0px;
@@ -8,11 +9,15 @@ body {
   background: #fff;
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCI+CjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0iI2ZmZiI+PC9yZWN0Pgo8cmVjdCB3aWR0aD0iMTAiIGhlaWdodD0iMTAiIGZpbGw9IiNjY2MiPjwvcmVjdD4KPHJlY3QgeD0iMTAiIHk9IjEwIiB3aWR0aD0iMTAiIGhlaWdodD0iMTAiIGZpbGw9IiNjY2MiPjwvcmVjdD4KPC9zdmc+");
   color: #fff;
-  font: 15px Helvetica, Arial, sans-serif;
+  font: 15px;
+  font-family: 'Rajdhani', sans-serif;
 }
 a {
   color: transparent;
   text-decoration: none;
+}
+.fixedClear {
+  clear: both;
 }
 .container {
   height: 100%;
@@ -36,8 +41,6 @@ a {
 .middle section {
   background-color: rgba(64,110,148,0.66);
   border: 1px solid #c0c0c0;
-  -webkit-border-radius: 1em;
-  -moz-border-radius: 1em;
   border-radius: 1em;
   color: #fff;
   cursor: pointer;
@@ -54,7 +57,7 @@ a {
 }
 .middle section p {
   margin: 0;
-  font-size: 8pt;
+  font-size: 10pt;
 }
 .middle section a {
   text-decoration: none;
@@ -69,161 +72,6 @@ a {
   opacity: 0;
   transition: all 0.5s ease-in-out;
   z-index: -1;
-}
-.pokedex {
-  -webkit-border-radius: 10em;
-  -moz-border-radius: 10em;
-  border-radius: 10em;
-  bottom: 0em;
-  height: 100%;
-  margin: 0 auto;
-  position: relative;
-  transition: all 1s ease-in-out;
-  width: 40em;
-}
-.pokedex.open {
-  bottom: 15em;
-  transition: all 1s ease-in-out;
-}
-.pokedex.open .modal {
-  transition: all 1s ease-in-out;
-  background: rgba(0,0,0,0.5);
-  height: inherit;
-  visibility: visible;
-}
-.pokedex.open .modal button {
-  background: transparent;
-  border: 1px solid #fff;
-  -webkit-border-radius: 100%;
-  -moz-border-radius: 100%;
-  border-radius: 100%;
-  color: #fff;
-  float: right;
-  height: 2em;
-  margin: 0.5em;
-  width: 2em;
-}
-.pokedex .circle-left-top,
-.pokedex .circle-right-top,
-.pokedex .circle-right-bottom,
-.pokedex .circle-left-bottom {
-  border-left: 1em solid transparent;
-  border-right: 1em solid transparent;
-  display: inline-block;
-  height: 15em;
-  width: 15em;
-}
-.pokedex .circle-right-top,
-.pokedex .circle-left-top {
-  border-bottom: 1em solid #000;
-  border-top: 1em solid transparent;
-}
-.pokedex .circle-right-bottom,
-.pokedex .circle-left-bottom {
-  border-bottom: 1em solid transparent;
-  border-top: 1em solid #000;
-}
-.pokedex .circle-right-top {
-  -webkit-border-radius: 0 0 0 100%;
-  -moz-border-radius: 0 0 0 100%;
-  border-radius: 0 0 0 100%;
-  float: right;
-  margin-top: -1em;
-}
-.pokedex .circle-left-top {
-  -webkit-border-radius: 0 0 100% 0;
-  -moz-border-radius: 0 0 100% 0;
-  border-radius: 0 0 100% 0;
-  left: 0em;
-  margin-top: -1em;
-}
-.pokedex .circle-right-bottom {
-  -webkit-border-radius: 100% 0 0 0;
-  -moz-border-radius: 100% 0 0 0;
-  border-radius: 100% 0 0 0;
-  float: right;
-  margin-top: 2em;
-}
-.pokedex .circle-left-bottom {
-  -webkit-border-radius: 0 100% 0 0;
-  -moz-border-radius: 0 100% 0 0;
-  border-radius: 0 100% 0 0;
-  left: 0em;
-  margin-top: 2em;
-}
-.pokedex .bottom,
-.pokedex .top {
-  background: #dc143c;
-  height: 18em;
-}
-.pokedex .top {
-  -webkit-border-radius: 5em 5em 0 0;
-  -moz-border-radius: 5em 5em 0 0;
-  border-radius: 5em 5em 0 0;
-}
-.pokedex .bottom {
-  -webkit-border-radius: 0 0 5em 5em;
-  -moz-border-radius: 0 0 5em 5em;
-  border-radius: 0 0 5em 5em;
-  bottom: 0;
-  width: inherit;
-}
-.pokedex .panel,
-.pokedex .divisor,
-.pokedex .divisor .button {
-  position: absolute;
-}
-.pokedex .panel {
-  background: #000;
-  border: 1em solid #add8e6;
-  -webkit-border-radius: 100%;
-  -moz-border-radius: 100%;
-  border-radius: 100%;
-  height: 15em;
-  right: 11.5em;
-  top: 12.5em;
-  transition: all 1s ease-in-out;
-  width: 15em;
-}
-.pokedex .divisor {
-  background: #add8e6;
-  bottom: 4.5em;
-  height: 6em;
-  width: 100%;
-}
-.pokedex .divisor .button {
-  background: #00ced1;
-  border: 0.5em solid #add8e6;
-  -webkit-border-radius: 100%;
-  -moz-border-radius: 100%;
-  border-radius: 100%;
-  bottom: -1em;
-  box-shadow: 0 0.5em 0 #90b0b3;
-  cursor: pointer;
-  height: 8em;
-  left: 2.8em;
-  transition: all 0.2s linear;
-  width: 8em;
-}
-.pokedex .divisor .button:active {
-  box-shadow: 0 2px 0 #8c96a6 !important;
-  transform: translateY(3px) !important;
-}
-::-webkit-scrollbar {
-  width: 1em;
-}
-::-webkit-scrollbar-track {
-  -webkit-box-shadow: 0 0 6px #808080 inset;
-  -webkit-border-radius: 5em #808080 solid;
-  -moz-border-radius: 5em #808080 solid;
-  border-radius: 5em #808080 solid;
-}
-::-webkit-scrollbar-thumb {
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
-  background-color: rgba(0,0,0,0.3);
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
 }
 .view {
   height: inherit;
@@ -258,8 +106,6 @@ a {
 .record.ng-anchor-out {
   background-color: rgba(64,110,148,0.66);
   border: 1px solid #c0c0c0;
-  -webkit-border-radius: 1em;
-  -moz-border-radius: 1em;
   border-radius: 1em;
   height: 5em;
   text-align: center;
@@ -302,44 +148,471 @@ a {
 .listar {
   text-align: center;
 }
-.modal {
+::-webkit-scrollbar {
+  width: 1em;
+}
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: 0 0 6px #808080 inset;
+  border-radius: 5em #808080 solid;
+}
+::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+  background-color: rgba(0,0,0,0.3);
+  border-radius: 10px;
+}
+.pokedex {
+  -webkit-border-radius: 10em;
+  -ms-border-radius: 10em;
+  -moz-border-radius: 10em;
+  -o-border-radius: 10em;
+  border-radius: 10em;
+  bottom: 0em;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+  transition: all 1s ease-in-out;
+  width: 40em;
+}
+.pokedex.open {
+  bottom: 15em;
+  transition: all 1s ease-in-out;
+}
+.pokedex.open .modal {
+  transition: all 1s ease-in-out;
+  background: rgba(0,0,0,0.5);
+  height: inherit;
+  visibility: visible;
+}
+.pokedex.open .modal button {
+  background: transparent;
+  border: 1px solid #fff;
+  -webkit-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -o-border-radius: 100%;
+  border-radius: 100%;
+  color: #fff;
+  cursor: pointer;
+  float: right;
+  height: 3em;
+  margin: 0.5em;
+  width: 3em;
+  position: absolute;
+  right: 0;
+}
+.pokedex .circle-left-top,
+.pokedex .circle-right-top,
+.pokedex .circle-right-bottom,
+.pokedex .circle-left-bottom {
+  border-left: 1em solid transparent;
+  border-right: 1em solid transparent;
+  display: inline-block;
+  height: 15em;
+  width: 15em;
+}
+.pokedex .circle-right-top,
+.pokedex .circle-left-top {
+  border-bottom: 1em solid #000;
+  border-top: 1em solid transparent;
+}
+.pokedex .circle-right-bottom,
+.pokedex .circle-left-bottom {
+  border-bottom: 1em solid transparent;
+  border-top: 1em solid #000;
+}
+.pokedex .circle-right-top {
+  -webkit-border-radius: 0 0 0 100%;
+  -ms-border-radius: 0 0 0 100%;
+  -moz-border-radius: 0 0 0 100%;
+  -o-border-radius: 0 0 0 100%;
+  border-radius: 0 0 0 100%;
+  float: right;
+  margin-top: -1em;
+}
+.pokedex .circle-left-top {
+  -webkit-border-radius: 0 0 100% 0;
+  -ms-border-radius: 0 0 100% 0;
+  -moz-border-radius: 0 0 100% 0;
+  -o-border-radius: 0 0 100% 0;
+  border-radius: 0 0 100% 0;
+  left: 0em;
+  margin-top: -1em;
+}
+.pokedex .circle-right-bottom {
+  -webkit-border-radius: 100% 0 0 0;
+  -ms-border-radius: 100% 0 0 0;
+  -moz-border-radius: 100% 0 0 0;
+  -o-border-radius: 100% 0 0 0;
+  border-radius: 100% 0 0 0;
+  float: right;
+  margin-top: 2em;
+}
+.pokedex .circle-left-bottom {
+  -webkit-border-radius: 0 100% 0 0;
+  -ms-border-radius: 0 100% 0 0;
+  -moz-border-radius: 0 100% 0 0;
+  -o-border-radius: 0 100% 0 0;
+  border-radius: 0 100% 0 0;
+  left: 0em;
+  margin-top: 2em;
+}
+.pokedex .bottom,
+.pokedex .top {
+  background: #dc143c;
+  height: 18em;
+}
+.pokedex .top {
+  -webkit-border-radius: 5em 5em 0 0;
+  -ms-border-radius: 5em 5em 0 0;
+  -moz-border-radius: 5em 5em 0 0;
+  -o-border-radius: 5em 5em 0 0;
+  border-radius: 5em 5em 0 0;
+}
+.pokedex .bottom {
+  -webkit-border-radius: 0 0 5em 5em;
+  -ms-border-radius: 0 0 5em 5em;
+  -moz-border-radius: 0 0 5em 5em;
+  -o-border-radius: 0 0 5em 5em;
+  border-radius: 0 0 5em 5em;
+  bottom: 0;
+  width: inherit;
+}
+.pokedex .panel,
+.pokedex .divisor,
+.pokedex .divisor .button {
+  position: absolute;
+}
+.pokedex .panel {
+  background: #000;
+  border: 1em solid #add8e6;
+  -webkit-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -o-border-radius: 100%;
+  border-radius: 100%;
+  height: 15em;
+  right: 11.5em;
+  top: 12.5em;
+  transition: all 1s ease-in-out;
+  width: 15em;
+}
+.pokedex .divisor {
+  background: #add8e6;
+  bottom: 4.5em;
+  height: 6em;
+  width: 100%;
+}
+.pokedex .divisor .button {
+  background: #00ced1;
+  border: 0.5em solid #add8e6;
+  -webkit-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -o-border-radius: 100%;
+  border-radius: 100%;
+  bottom: -1em;
+  box-shadow: 0 0.5em 0 #90b0b3;
+  cursor: pointer;
+  height: 8em;
+  left: 2.8em;
+  transition: all 0.2s linear;
+  width: 8em;
+}
+.pokedex .divisor .button:active {
+  box-shadow: 0 2px 0 #8c96a6 !important;
+  transform: translateY(3px) !important;
+}
+.pokedex .modal {
   visibility: hidden;
 }
-.modal section {
-  background: transparent;
+.pokedex .modal section {
+  background: rgba(255,255,255,0.74);
+  -webkit-border-radius: 2em 0em;
+  -ms-border-radius: 2em 0em;
+  -moz-border-radius: 2em 0em;
+  -o-border-radius: 2em 0em;
+  border-radius: 2em 0em;
   border-style: none;
-  height: 11em;
+  height: 16em;
   text-align: center;
-  width: 11em;
+  width: 16em;
 }
-.modal section img {
-  height: 10em;
-  width: 10em;
+.pokedex .modal section img {
+  height: 15em;
+  width: 15em;
 }
-article {
-  position: relative;
-  width: inherit;
-  display: inline-block;
-  margin-left: 2em;
-}
-article .basico {
-  widows: 80%;
-  display: inherit;
-}
-article .basico .line {
-  margin: 0 auto;
-  display: flex;
-  width: 90%;
-}
-article span {
+.pokedex .modal span {
   background: rgba(0,187,249,0.4);
   border: 1px dotted rgba(0,187,249,0.4);
-  padding: 0 1em 0 0.8em;
-  margin: 0.2em;
   -webkit-border-radius: 1em;
+  -ms-border-radius: 1em;
   -moz-border-radius: 1em;
+  -o-border-radius: 1em;
   border-radius: 1em;
+  margin: 0.2em;
+  padding: 0 1em 0 0.8em;
 }
-article label {
+.pokedex .modal label {
   width: 8em;
+}
+.pokedex .pokemon {
+  height: inherit;
+  position: absolute;
+}
+.pokedex .pokemon-description,
+.pokedex .pokemon-foto {
+  display: inline-block;
+  float: left;
+}
+.pokedex .pokemon-attributes {
+  margin: 0.5em;
+  width: 50%;
+}
+.pokedex .pokemon-attributes h3 {
+  clear: both;
+  color: #fff;
+  float: left;
+  margin: 0px;
+  margin-top: 1.25em;
+  text-transform: none;
+  width: 100%;
+}
+.pokedex .pokemon-attributes ul {
+  clear: both;
+  list-style: none;
+  width: 100%;
+}
+.pokedex .pokemon-attributes ul li {
+  -webkit-border-radius: 0.5em;
+  -ms-border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+  -o-border-radius: 0.5em;
+  border-radius: 0.5em;
+  float: left;
+  margin: 0.5em 0.5em 0 0;
+  padding: 0;
+  text-align: center;
+  width: 5em;
+}
+.pokedex .pokemon-attributes ul li a {
+  color: #fff;
+  display: block;
+  float: left;
+  line-height: 100%;
+  padding: 0.5em 0;
+  width: 100%;
+}
+.pokedex .pokemon-description {
+  margin: 0.5em;
+  width: 50%;
+  height: 18em;
+}
+.pokedex .pokemon-description p {
+  line-height: 150%;
+}
+.pokedex .pokemon-stats {
+  background-color: #a4a4a4;
+  -webkit-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  display: block;
+  float: left;
+  margin: 0.5em;
+  width: 100%;
+/*.gauge
+                background: #fff;
+                position: relative;
+                overflow: hidden;
+          .gauge li
+                list-style none
+                background: transparent;
+                border-bottom: 0.25em solid #a4a4a4;
+                height: 0.5em;
+                width: 100%;
+                position: relative;
+                z-index: 2;*/
+}
+.pokedex .pokemon-stats>ul>li {
+  float: left;
+  margin-right: -100%;
+  width: 12.95%;
+  display: inline-block;
+  margin: 0 1.5625% 1.25em 0;
+}
+.pokedex .pokemon-stats .gauge {
+  padding: 0;
+  background: #fff;
+}
+.pokedex .pokemon-stats .gauge li {
+  list-style: none;
+  background: transparent;
+  border-bottom: 0.25em solid #a4a4a4;
+  height: 0.5em;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+.background-color-bug {
+  background-color: #729f3f;
+  background: -webkit-linear-gradient(180deg, #729f3f 50%, #729f3f 50%);
+  background: -moz-linear-gradient(180deg, #729f3f 50%, #729f3f 50%);
+  background: -ms-linear-gradient(180deg, #729f3f 50%, #729f3f 50%);
+  background: -o-linear-gradient(180deg, #729f3f 50%, #729f3f 50%);
+  background: linear-gradient(180deg, #729f3f 50%, #729f3f 50%);
+  color: #fff;
+}
+.background-color-dark {
+  background-color: #707070;
+  background: -webkit-linear-gradient(180deg, #707070 50%, #707070 50%);
+  background: -moz-linear-gradient(180deg, #707070 50%, #707070 50%);
+  background: -ms-linear-gradient(180deg, #707070 50%, #707070 50%);
+  background: -o-linear-gradient(180deg, #707070 50%, #707070 50%);
+  background: linear-gradient(180deg, #707070 50%, #707070 50%);
+  color: #fff;
+}
+.background-color-dragon {
+  background-color: #53a4cf;
+  background: -webkit-linear-gradient(180deg, #53a4cf 50%, #f16e57 50%);
+  background: -moz-linear-gradient(180deg, #53a4cf 50%, #f16e57 50%);
+  background: -ms-linear-gradient(180deg, #53a4cf 50%, #f16e57 50%);
+  background: -o-linear-gradient(180deg, #53a4cf 50%, #f16e57 50%);
+  background: linear-gradient(180deg, #53a4cf 50%, #f16e57 50%);
+  color: #fff;
+}
+.background-color-electric {
+  background-color: #eed535;
+  background: -webkit-linear-gradient(180deg, #eed535 50%, #eed535 50%);
+  background: -moz-linear-gradient(180deg, #eed535 50%, #eed535 50%);
+  background: -ms-linear-gradient(180deg, #eed535 50%, #eed535 50%);
+  background: -o-linear-gradient(180deg, #eed535 50%, #eed535 50%);
+  background: linear-gradient(180deg, #eed535 50%, #eed535 50%);
+  color: #212121;
+}
+.background-color-fairy {
+  background-color: #fdb9e9;
+  background: -webkit-linear-gradient(180deg, #fdb9e9 50%, #fdb9e9 50%);
+  background: -moz-linear-gradient(180deg, #fdb9e9 50%, #fdb9e9 50%);
+  background: -ms-linear-gradient(180deg, #fdb9e9 50%, #fdb9e9 50%);
+  background: -o-linear-gradient(180deg, #fdb9e9 50%, #fdb9e9 50%);
+  background: linear-gradient(180deg, #fdb9e9 50%, #fdb9e9 50%);
+  color: #212121;
+}
+.background-color-fighting {
+  background-color: #d56723;
+  background: -webkit-linear-gradient(180deg, #d56723 50%, #d56723 50%);
+  background: -moz-linear-gradient(180deg, #d56723 50%, #d56723 50%);
+  background: -ms-linear-gradient(180deg, #d56723 50%, #d56723 50%);
+  background: -o-linear-gradient(180deg, #d56723 50%, #d56723 50%);
+  background: linear-gradient(180deg, #d56723 50%, #d56723 50%);
+  color: #fff;
+}
+.background-color-fire {
+  background-color: #fd7d24;
+  background: -webkit-linear-gradient(180deg, #fd7d24 50%, #fd7d24 50%);
+  background: -moz-linear-gradient(180deg, #fd7d24 50%, #fd7d24 50%);
+  background: -ms-linear-gradient(180deg, #fd7d24 50%, #fd7d24 50%);
+  background: -o-linear-gradient(180deg, #fd7d24 50%, #fd7d24 50%);
+  background: linear-gradient(180deg, #fd7d24 50%, #fd7d24 50%);
+  color: #fff;
+}
+.background-color-flying {
+  background-color: #3dc7ef;
+  background: -webkit-linear-gradient(180deg, #3dc7ef 50%, #bdb9b8 50%);
+  background: -moz-linear-gradient(180deg, #3dc7ef 50%, #bdb9b8 50%);
+  background: -ms-linear-gradient(180deg, #3dc7ef 50%, #bdb9b8 50%);
+  background: -o-linear-gradient(180deg, #3dc7ef 50%, #bdb9b8 50%);
+  background: linear-gradient(180deg, #3dc7ef 50%, #bdb9b8 50%);
+  color: #212121;
+}
+.background-color-ghost {
+  background-color: #7b62a3;
+  background: -webkit-linear-gradient(180deg, #7b62a3 50%, #7b62a3 50%);
+  background: -moz-linear-gradient(180deg, #7b62a3 50%, #7b62a3 50%);
+  background: -ms-linear-gradient(180deg, #7b62a3 50%, #7b62a3 50%);
+  background: -o-linear-gradient(180deg, #7b62a3 50%, #7b62a3 50%);
+  background: linear-gradient(180deg, #7b62a3 50%, #7b62a3 50%);
+  color: #fff;
+}
+.background-color-grass {
+  background-color: #9bcc50;
+  background: -webkit-linear-gradient(180deg, #9bcc50 50%, #9bcc50 50%);
+  background: -moz-linear-gradient(180deg, #9bcc50 50%, #9bcc50 50%);
+  background: -ms-linear-gradient(180deg, #9bcc50 50%, #9bcc50 50%);
+  background: -o-linear-gradient(180deg, #9bcc50 50%, #9bcc50 50%);
+  background: linear-gradient(180deg, #9bcc50 50%, #9bcc50 50%);
+  color: #212121;
+}
+.background-color-ground {
+  background-color: #f7de3f;
+  background: -webkit-linear-gradient(180deg, #f7de3f 50%, #ab9842 50%);
+  background: -moz-linear-gradient(180deg, #f7de3f 50%, #ab9842 50%);
+  background: -ms-linear-gradient(180deg, #f7de3f 50%, #ab9842 50%);
+  background: -o-linear-gradient(180deg, #f7de3f 50%, #ab9842 50%);
+  background: linear-gradient(180deg, #f7de3f 50%, #ab9842 50%);
+  color: #212121;
+}
+.background-color-ice {
+  background-color: #51c4e7;
+  background: -webkit-linear-gradient(180deg, #51c4e7 50%, #51c4e7 50%);
+  background: -moz-linear-gradient(180deg, #51c4e7 50%, #51c4e7 50%);
+  background: -ms-linear-gradient(180deg, #51c4e7 50%, #51c4e7 50%);
+  background: -o-linear-gradient(180deg, #51c4e7 50%, #51c4e7 50%);
+  background: linear-gradient(180deg, #51c4e7 50%, #51c4e7 50%);
+  color: #212121;
+}
+.background-color-normal {
+  background-color: #a4acaf;
+  background: -webkit-linear-gradient(180deg, #a4acaf 50%, #a4acaf 50%);
+  background: -moz-linear-gradient(180deg, #a4acaf 50%, #a4acaf 50%);
+  background: -ms-linear-gradient(180deg, #a4acaf 50%, #a4acaf 50%);
+  background: -o-linear-gradient(180deg, #a4acaf 50%, #a4acaf 50%);
+  background: linear-gradient(180deg, #a4acaf 50%, #a4acaf 50%);
+  color: #212121;
+}
+.background-color-poison {
+  background-color: #b97fc9;
+  background: -webkit-linear-gradient(180deg, #b97fc9 50%, #b97fc9 50%);
+  background: -moz-linear-gradient(180deg, #b97fc9 50%, #b97fc9 50%);
+  background: -ms-linear-gradient(180deg, #b97fc9 50%, #b97fc9 50%);
+  background: -o-linear-gradient(180deg, #b97fc9 50%, #b97fc9 50%);
+  background: linear-gradient(180deg, #b97fc9 50%, #b97fc9 50%);
+  color: #fff;
+}
+.background-color-psychic {
+  background-color: #f366b9;
+  background: -webkit-linear-gradient(180deg, #f366b9 50%, #f366b9 50%);
+  background: -moz-linear-gradient(180deg, #f366b9 50%, #f366b9 50%);
+  background: -ms-linear-gradient(180deg, #f366b9 50%, #f366b9 50%);
+  background: -o-linear-gradient(180deg, #f366b9 50%, #f366b9 50%);
+  background: linear-gradient(180deg, #f366b9 50%, #f366b9 50%);
+  color: #fff;
+}
+.background-color-rock {
+  background-color: #a38c21;
+  background: -webkit-linear-gradient(180deg, #a38c21 50%, #a38c21 50%);
+  background: -moz-linear-gradient(180deg, #a38c21 50%, #a38c21 50%);
+  background: -ms-linear-gradient(180deg, #a38c21 50%, #a38c21 50%);
+  background: -o-linear-gradient(180deg, #a38c21 50%, #a38c21 50%);
+  background: linear-gradient(180deg, #a38c21 50%, #a38c21 50%);
+  color: #fff;
+}
+.background-color-steel {
+  background-color: #9eb7b8;
+  background: -webkit-linear-gradient(180deg, #9eb7b8 50%, #9eb7b8 50%);
+  background: -moz-linear-gradient(180deg, #9eb7b8 50%, #9eb7b8 50%);
+  background: -ms-linear-gradient(180deg, #9eb7b8 50%, #9eb7b8 50%);
+  background: -o-linear-gradient(180deg, #9eb7b8 50%, #9eb7b8 50%);
+  background: linear-gradient(180deg, #9eb7b8 50%, #9eb7b8 50%);
+  color: #212121;
+}
+.background-color-water {
+  background-color: #4592c4;
+  background: -webkit-linear-gradient(180deg, #4592c4 50%, #4592c4 50%);
+  background: -moz-linear-gradient(180deg, #4592c4 50%, #4592c4 50%);
+  background: -ms-linear-gradient(180deg, #4592c4 50%, #4592c4 50%);
+  background: -o-linear-gradient(180deg, #4592c4 50%, #4592c4 50%);
+  background: linear-gradient(180deg, #4592c4 50%, #4592c4 50%);
+  color: #fff;
 }
