@@ -114,17 +114,19 @@
         section img
             height 15em
             width 15em
-        span
+        /*span
             background rgba(0, 187, 249, 0.4)
             border 1px dotted rgba(0, 187, 249, 0.4)
             border-radius 1em
             margin .2em
             padding 0 1em 0 .8em
         label
-            width 8em
+            width 8em*/
     .pokemon
         height inherit
         position absolute
+        h3
+            margin 0em
         &-description,
         &-foto
             display inline-block
@@ -132,22 +134,15 @@
         &-attributes
             margin .5em
             width 50%
-            h3
-                clear both
-                color white
-                float left
-                margin 0px
-                margin-top 1.25em
-                text-transform none
-                width 100%
             ul
                 clear both
                 list-style none
                 width 100%
+                margin 0
                 li
                     border-radius .5em
                     float left
-                    margin 0.5em .5em 0 0
+                    margin 0 .5em 0 0
                     padding 0
                     text-align center
                     width 5em
@@ -161,12 +156,10 @@
         &-description
             margin .5em
             width 50%
-            height 18em
+            height 15em
             p
                 line-height 150%
         &-stats
-            background-color #a4a4a4
-            border-radius 10px
             display block
             float left
             margin .5em
@@ -177,6 +170,7 @@
                   width 12.95%
                   display inline-block
                   margin 0 1.5625% 1.25em 0
+                  text-align center
             .gauge
                 padding 0
                 background white
@@ -184,7 +178,7 @@
 
                 list-style none
                 background transparent
-                border-bottom 0.25em solid #a4a4a4
+                border-bottom 0.25em solid rgb(57, 105, 113)
                 height 0.5em
                 width 100%
                 position relative

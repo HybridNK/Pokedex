@@ -1,44 +1,158 @@
 <div class="modal">
-    <button ng-click="hideInfo()">X</button>
-    <div>
-        <section ng-animate-ref="{{ id }}" class="record">
-            <img ng-src="http://assets22.pokemon.com/assets/cms2/img/pokedex/full/{{id | tripla}}.png" alt="">
-        </section>
-        <article>
-            <div class="pokemon">
-                <div class="line">
-                    <h3>{{pkmn.name}} N.º{{pkmn.national_id | tripla}}</h3>
-                </div>
-                <div class="line">
-                    <label>ATK: </label>{{pkmn.attack}}
-                </div>
-                <div class="line">
-                    <label>DEF: </label>{{pkmn.defense}}
-                </div>
-                <div class="line">
-                    <label>SP ATK: </label>{{pkmn.sp_atk}}
-                </div>
-                <div class="line">
-                    <label>SP DEF: </label>{{pkmn.sp_def}}
-                </div>
-                <div class="line">
-                    <label>SPEED: </label>{{pkmn.speed}}
-                </div>
-                <div class="line">
-                    <label>WEIGHT: </label>{{pkmn.weight}}
-                </div>
-                <div class="pokemon-attributes">
-                    <h3>Tipo</h3>
-                    <ul>
-                        <li ng-repeat="type in pkmn.types" class="background-color-{{type.name}}">
-                            <a href="">{{type.name | uppercase}}</a>
-                        </li>
-                    </ul>
-                </div>
-                <!--<div class="line">
-                    <label>TYPES: </label><span ng-repeat="type in pkmn.types">{{type.name}}</span>
-                </div>-->
+    <div class="pokemon">
+        <button ng-click="hideInfo()">X</button>
+        <div class="pokemon-foto">
+            <section ng-animate-ref="{{ id }}" class="record">
+                <img ng-src="http://assets22.pokemon.com/assets/cms2/img/pokedex/full/{{id | tripla}}.png" alt="">
+            </section>
+        </div>
+        <div class="pokemon-description">
+            <h3>{{pkmn.name}} N.º{{pkmn.national_id | tripla}}</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut suscipit, nulla facere illo est odio quidem deleniti reprehenderit. Perferendis illo optio, provident soluta. Cum quidem alias vel nostrum accusantium quae?
+            </p>
+        </div>
+        <div class="fixedClear"></div>
+        <div class="pokemon-attributes">
+            <h3>Tipe</h3>
+            <ul>
+                <li ng-repeat="type in pkmn.types" class="background-color-{{type.name}}">
+                    <a href="">{{type.name | uppercase}}</a>
+                </li>
+            </ul>
+        </div>
+        <div class="pokemon-stats">
+          <h3>Puntos de base</h3>
+          <ul>
+            <li class="first">
+              <ul class="gauge">
+                <li data-value="2" class="meter" style="top: 80%;"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+              <span>PS</span>
+            </li>
+
+            <li>
+              <ul class="gauge">
+                <li data-value="3" class="meter" style="top: 70%;"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+              <span>Ataque</span>
+            </li>
+
+            <li>
+              <ul class="gauge">
+                <li data-value="2" class="meter" style="top: 80%;"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+              <span>Defensa</span>
+            </li>
+
+            <li>
+              <ul class="gauge">
+                <li data-value="3" class="meter" style="top: 70%;"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+              <span>Ataque Especial</span>
+            </li>
+
+            <li>
+              <ul class="gauge">
+                <li data-value="3" class="meter" style="top: 70%;"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+              <span>Defensa Especial</span>
+            </li>
+
+            <li>
+              <ul class="gauge">
+                <li data-value="3" class="meter" style="top: 70%;"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+              <span>Velocidad</span>
+            </li>
+          </ul>
+
+        </div>
+        <!--
+        <div class="pokemon-stats">
+            <div class="line">
             </div>
-        </article>
+            <div class="line">
+                <label>ATK: </label>{{pkmn.attack}}
+            </div>
+            <div class="line">
+                <label>DEF: </label>{{pkmn.defense}}
+            </div>
+            <div class="line">
+                <label>SP ATK: </label>{{pkmn.sp_atk}}
+            </div>
+            <div class="line">
+                <label>SP DEF: </label>{{pkmn.sp_def}}
+            </div>
+            <div class="line">
+                <label>SPEED: </label>{{pkmn.speed}}
+            </div>
+            <div class="line">
+                <label>WEIGHT: </label>{{pkmn.weight}}
+            </div>-->
+            <!--<div class="line">
+                <label>TYPES: </label><span ng-repeat="type in pkmn.types">{{type.name}}</span>
+            </div>-->
+        </div>
     </div>
 </div>
