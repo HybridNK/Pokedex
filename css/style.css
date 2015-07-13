@@ -324,14 +324,6 @@ a {
 }
 .pokedex .modal {
   visibility: hidden;
-/*span
-            background rgba(0, 187, 249, 0.4)
-            border 1px dotted rgba(0, 187, 249, 0.4)
-            border-radius 1em
-            margin .2em
-            padding 0 1em 0 .8em
-        label
-            width 8em*/
 }
 .pokedex .modal section {
   background: rgba(255,255,255,0.74);
