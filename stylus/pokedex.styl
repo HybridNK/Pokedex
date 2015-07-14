@@ -156,6 +156,27 @@
             float left
             margin .5em
             width 100%
+            .gauge
+                background white
+                position relative
+                overflow hidden
+                padding 0
+                .meter
+                    background #30a7d7
+                    border none
+                    height 120%
+                    position absolute
+                    top 100%
+                    z-index 1
+            .gauge li
+                left 0em
+                list-style none
+                background transparent
+                border-bottom 0.25em solid rgb(57, 105, 113)
+                height 0.5em
+                width 5em
+                position relative
+                z-index 2
             &>ul>li
                   float left
                   margin-right -100%
@@ -163,28 +184,4 @@
                   display inline-block
                   margin 0 1.5625% 1.25em 0
                   text-align center
-            .gauge
-                padding 0
-                background white
-            .gauge li
-
-                list-style none
-                background transparent
-                border-bottom 0.25em solid rgb(57, 105, 113)
-                height 0.5em
-                width 100%
-                position relative
-                z-index 2
-              /*.gauge
-                background: #fff;
-                position: relative;
-                overflow: hidden;
-          .gauge li
-                list-style none
-                background: transparent;
-                border-bottom: 0.25em solid #a4a4a4;
-                height: 0.5em;
-                width: 100%;
-                position: relative;
-                z-index: 2;*/
 
