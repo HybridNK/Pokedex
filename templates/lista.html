@@ -13,146 +13,78 @@
             </p>
         </div>
         <div class="fixedClear"></div>
-        <div class="pokemon-attributes">
-            <h3>Tipe</h3>
-            <ul>
-                <li ng-repeat="type in pkmn.types" class="background-color-{{type.name}}">
-                    <a href="">{{type.name | uppercase}}</a>
-                </li>
-            </ul>
-        </div>
-        <div class="pokemon-stats">
-          <h3>Puntos de base</h3>
-          <ul>
-            <li class="first">
-              <ul class="gauge">
-                <li data-value="2" class="meter" style="top: {{pkmn.hp}}%"></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
-              <span>PS</span>
-            </li>
-
-            <li>
-              <ul class="gauge">
-                <li data-value="3" class="meter" style="top: {{pkmn.attack}}%"></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
-              <span>Ataque</span>
-            </li>
-
-            <li>
-              <ul class="gauge">
-                <li data-value="2" class="meter" style="top: {{pkmn.defense}}%"></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
-              <span>Defensa</span>
-            </li>
-
-            <li>
-              <ul class="gauge">
-                <li data-value="3" class="meter" style="top: {{pkmn.sp_atk}}%"></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
-              <span>Ataque Especial</span>
-            </li>
-
-            <li>
-              <ul class="gauge">
-                <li data-value="3" class="meter" style="top: {{pkmn.sp_def}}%"></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
-              <span>Defensa Especial</span>
-            </li>
-
-            <li>
-              <ul class="gauge">
-                <li data-value="3" class="meter" style="top:{{pkmn.speed}}%"></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
-              <span>Velocidad</span>
-            </li>
-          </ul>
-
-        </div>
-        <!--
-        <div class="pokemon-stats">
-            <div class="line">
+        <div>
+            <div class="pokemon-attributes">
+                <h3>Type</h3>
+                <ul>
+                    <li ng-repeat="type in pkmn.types" class="background-color-{{type.name}}">
+                        <a href="">{{type.name | uppercase}}</a>
+                    </li>
+                </ul>
             </div>
-            <div class="line">
-                <label>ATK: </label>{{pkmn.attack}}
+            <!--
+                <div class="pokemon-attributes">
+                    <h3>Type</h3>
+                    <ul>
+                        <li ng-repeat="type in pkmn.types" class="background-color-{{type.name}}">
+                            <a href="">{{type.name | uppercase}}</a>
+                        </li>
+                    </ul>
+                </div>
+            -->
+            <div class="pokemon-stats">
+                <h3>Stats</h3>
+                <ul>
+                    <li class="first">
+                      <ul class="gauge">
+                        <li data-value="2" class="meter" style="top: {{Math.ceil((.833 * (120 - pkmn.hp))/10)*10 }}%"></li>
+                        <li ng-repeat="n in 'charmander' track by $index"></li>
+                      </ul>
+                      <span>PS</span>
+                    </li>
+
+                    <li>
+                      <ul class="gauge">
+                        <li data-value="3" class="meter" style="top: {{Math.ceil((.833 * (120 - pkmn.attack))/10)*10}}%"></li>
+                        <li ng-repeat="n in 'charmander' track by $index"></li>
+                      </ul>
+                      <span>Attack</span>
+                    </li>
+
+                    <li>
+                      <ul class="gauge">
+                        <li data-value="2" class="meter" style="top: {{Math.ceil((.833 * (120 - pkmn.defense))/10)*10}}%"></li>
+                        <li ng-repeat="n in 'charmander' track by $index"></li>
+                      </ul>
+                      <span>Defense</span>
+                    </li>
+
+                    <li>
+                      <ul class="gauge">
+                        <li data-value="3" class="meter" style="top: {{Math.ceil((.833 * (120 - pkmn.sp_atk))/10)*10}}%"></li>
+                        <li ng-repeat="n in 'charmander' track by $index"></li>
+                      </ul>
+                      <span>Special Attack</span>
+                    </li>
+
+                    <li>
+                      <ul class="gauge">
+                        <li data-value="3" class="meter" style="top: {{Math.ceil(.833 * (120 - pkmn.sp_def)/10)*10}}%"></li>
+                        <li ng-repeat="n in 'charmander' track by $index"></li>
+                      </ul>
+                      <span>Special Defense</span>
+                    </li>
+
+                    <li>
+                      <ul class="gauge">
+                        <li data-value="3" class="meter" style="top:{{Math.ceil(.833 * (120 - pkmn.speed)/10)*10}}%"></li>
+                        <li ng-repeat="n in 'charmander' track by $index"></li>
+                      </ul>
+                      <span>Speed</span>
+                    </li>
+                </ul>
             </div>
-            <div class="line">
-                <label>DEF: </label>{{pkmn.defense}}
-            </div>
-            <div class="line">
-                <label>SP ATK: </label>{{pkmn.sp_atk}}
-            </div>
-            <div class="line">
-                <label>SP DEF: </label>{{pkmn.sp_def}}
-            </div>
-            <div class="line">
-                <label>SPEED: </label>{{pkmn.speed}}
-            </div>
-            <div class="line">
-                <label>WEIGHT: </label>{{pkmn.weight}}
-            </div>-->
-            <!--<div class="line">
-                <label>TYPES: </label><span ng-repeat="type in pkmn.types">{{type.name}}</span>
-            </div>-->
+            <pre>{{descripcion | json}}</pre>
         </div>
     </div>
 </div>
