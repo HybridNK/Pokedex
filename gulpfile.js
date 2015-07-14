@@ -47,9 +47,9 @@ gulp.task('minifyCss', function(){
 // Observar cambios en archivos
 gulp.task('watch', function(){
 	gulp.watch('js/source/*.js',['lint','scripts']);
-	gulp.watch('stylus/style.styl',['stylus','minifyCss']);
+	gulp.watch('stylus/*.styl',['stylus']);
 });
 
 
-gulp.task('default', ['lint', 'stylus', 'scripts', 'watch', 'minifyCss']);
+gulp.task('default', ['lint', 'stylus', 'scripts', 'watch']);
 
