@@ -17,13 +17,13 @@ var app = angular.module('pokedex', ['ngRoute', 'ngAnimate'])
         }
     ])
     .filter("tripla", function() {
-      return function(number) {
-        if (number !== null && number !== undefined) {
-          var str = "" + number;
-          while (str.length < 3) str = "0" + str;
-          return str;
-        }
-      };
+        return function(number) {
+            if (number !== null && number !== undefined) {
+                var str = "" + number;
+                while (str.length < 3) str = "0" + str;
+                return str;
+            }
+        };
     })
     .factory('$storage', function() {
         return {
@@ -62,11 +62,18 @@ var app = angular.module('pokedex', ['ngRoute', 'ngAnimate'])
     }])
     .controller('informacion',['$scope','$routeParams','$http', function($scope, $routeParams, $http){
         $scope.isOpen = true;
-        $scope.id = parseInt($routeParams.tagId,10)
+        $scope.Math   = window.Math;
+        $scope.id     = parseInt($routeParams.tagId,10)
+
+        $http.get('http://pokeapi.co/api/v1/description/' + $scope.id)
+            .success(function(data) {
+                $scope.descripcion = data.description
+            });
 
         $http.get('http://pokeapi.co/api/v1/pokemon/' + $scope.id)
             .success(function(data) {
                $scope.pkmn = data;
-            })
+            });
+
 
     }])
