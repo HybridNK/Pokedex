@@ -8,9 +8,10 @@
         </div>
         <div class="pokemon-description">
             <h3>{{pkmn.name}} N.º{{pkmn.national_id | tripla}}</h3>
-            <p>
-               {{descripcion}}
-            </p>
+            <p>{{descripcion}}</p>
+        </div>
+            <div ng-show="pkmn.sexo">Masculino</div>
+            <div  ng-show="pkmn.sexo">Femenino</div>
         </div>
         <div class="fixedClear"></div>
         <div>
@@ -22,16 +23,6 @@
                     </li>
                 </ul>
             </div>
-            <!--
-                <div class="pokemon-attributes">
-                    <h3>Type</h3>
-                    <ul>
-                        <li ng-repeat="type in pkmn.types" class="background-color-{{type.name}}">
-                            <a href="">{{type.name | uppercase}}</a>
-                        </li>
-                    </ul>
-                </div>
-            -->
             <div class="pokemon-stats">
                 <h3>Stats</h3>
                 <ul>
