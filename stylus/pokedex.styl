@@ -10,9 +10,9 @@
         bottom 15em
         transition all 1s ease-in-out
         .modal
-            transition all 1s ease-in-out
             background rgba(0,0,0,.5)
             height inherit
+            transition all 1s ease-in-out
             visibility visible
             button
                 background transparent
@@ -23,9 +23,9 @@
                 float right
                 height 3em
                 margin .5em
-                width 3em
                 position absolute
                 right 0
+                width 3em
     .circle
         &-left-top
         &-right-top
@@ -115,7 +115,6 @@
             height 15em
             width 15em
     .pokemon
-        //height inherit
         position absolute
         h3
             margin 0em
@@ -124,16 +123,13 @@
             display inline-block
             float left
         &-attributes
-            margin .5em
-            height  10%
-            display inline-block
             float left
             width 45%
             ul
                 clear both
                 list-style none
-                width 100%
                 margin 0
+                width 100%
                 li
                     border-radius .5em
                     float left
@@ -155,40 +151,38 @@
                 line-height 150%
         &-stats
             display inline-block
-            //float left
-            //margin .5em
             width 50%
             .gauge
                 background white
-                position relative
                 overflow hidden
                 padding 0
+                position relative
                 .meter
-                    top 0%
-                    transition 1.5s ease-in-out all;
                     background #5DFD00
                     border none
                     height 120%
                     position absolute
+                    top 0%
                     top 100%
+                    transition 1.5s ease-in-out all;
                     z-index 1
             .gauge li
                 border-bottom 0.25em solid rgb(57, 105, 113)
                 height 0.5em
-                width 5em
                 position relative
+                width 5em
                 z-index 2
             &>ul>li
-                  float left
-                  margin-right -100%
-                  width 12.95%
                   display inline-block
-                  margin 0 1.5625% 1.25em 0
-                  text-align center
+                  float left
                   font-size 9pt
+                  margin 0 1.5625% 1.25em 0
+                  margin-right -100%
+                  text-align center
+                  width 12.95%
             &>ul
-                width 100%
+                background red
                 margin 1em 0
                 padding 0 2em
-                background red
+                width 100%
 
