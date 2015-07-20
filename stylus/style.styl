@@ -1,8 +1,12 @@
+@import 'mixin.styl'
+@import 'pokedex.styl'
+@import 'types.styl'
+
 @import url(http://fonts.googleapis.com/css?family=Rajdhani);
 html
 body
-    margin 0px
     height 100%
+    margin 0px
     overflow hidden
 body
     background white
@@ -43,14 +47,14 @@ a
         text-align center
         width 5em
         img
-            width 4em
             height 4em
+            width 4em
         p
-            margin 0
             font-size 10pt
+            margin 0
         a
-            text-decoration none
             color white
+            text-decoration none
 .open .middle
     height 85%
     overflow-x hidden
@@ -95,19 +99,15 @@ a
         @extend .record
         transform rotate(360deg)
     &.ng-anchor
-        transition .25s linear all
         height 11em
+        transition .25s linear all
         width 11em
         img
-            -webkit-filter blur(.25em)
-            -moz-filter blur(.25em)
-            -o-filter blur(.25em)
-            -ms-filter blur(.25em)
             filter blur(.25em)
-            transition 1s linear all
             height 100%
-            width 100%
             position relative
+            transition 1s linear all
+            width 100%
 .listar
     text-align center
 
@@ -122,6 +122,3 @@ a
     background-color rgba(0,0,0,0.3)
     border-radius 10px
 
- @import 'mixin.styl'
- @import 'pokedex.styl'
- @import 'types.styl'
