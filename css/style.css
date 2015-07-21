@@ -195,9 +195,10 @@
   float: left;
 }
 .pokedex .pokemon-attributes {
-  float: left;
   width: 45%;
+  float: left;
   margin: 0.5em;
+  display: inline-block;
 }
 .pokedex .pokemon-attributes ul {
   clear: both;
@@ -227,7 +228,7 @@
 }
 .pokedex .pokemon-description {
   margin: 0.5em;
-  width: 50%;
+  width: 45%;
 }
 .pokedex .pokemon-description p {
   line-height: 150%;
