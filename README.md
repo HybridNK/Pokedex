@@ -13,12 +13,9 @@ Aplicación para consultar información detallada de los pokémon, para los fana
 Si deseas contribuir sigue estos pasos:
 
 * Verifica si existen incidencias
-* Selecciona uno o mas 
 * Realiza un fork del repositorio dev
-* Realiza los cambios necesarios
+* Realiza los cambios necesarios para correcciones o mejoras
 * Posteriormente deberas de hacer un pull request
-* Verificaremos los cambios 
-
-si todo sale bien ya aceptaremos los cambios y lo integraremos al repositorio
+* Verificaremos los cambios si todo sale bien ya aceptaremos los cambios y lo integraremos al repositorio
 
 
