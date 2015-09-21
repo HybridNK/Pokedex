@@ -32,7 +32,7 @@ gulp.task('lint', function() {
 gulp.task('stylus', function(){
 	return gulp.src('stylus/style.styl')
     .pipe(stylus())
-    .pipe(minifyCss({compatibility: 'ie8'}))
+   // .pipe(minifyCss({compatibility: 'ie8'}))
     .pipe(gulp.dest('css'));
 });
 
