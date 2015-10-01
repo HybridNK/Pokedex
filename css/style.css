@@ -195,8 +195,7 @@
   float: left;
 }
 .pokedex .pokemon-attributes {
-  width: 45%;
-  float: left;
+  width: 17em;
   margin: 0.5em;
   display: inline-block;
 }
