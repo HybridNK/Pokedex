@@ -1,49 +1,11 @@
-var app = angular.module('pokedex', ['ngRoute', 'ngAnimate'])
-    .run(['$rootScope', function($rootScope){
-        $rootScope.isOpen = false;
-    }])
-    .config(['$routeProvider',
-        function($routeProvider) {
-            var path = 'templates/';
-            $routeProvider
-                .when('/informacion/:tagId', {
-                    templateUrl: path + 'lista.html',
-                    controller: 'informacion'
-                })
-                .otherwise({
-                    templateUrl: path + 'home.html',
-                    controller: 'main'
-                });
-        }
-    ])
-    .filter("tripla", function() {
-        return function(number) {
-            if (number !== null && number !== undefined) {
-                var str = "" + number;
-                while (str.length < 3) str = "0" + str;
-                return str;
-            }
-        };
-    })
-    .factory('$storage', function() {
-        return {
-            data: [],
-            set: function(index, data) {
-                this.data[index] = data;
-            },
-            get: function(index) {
-                return this.data[index] || [];
-            }
-        };
-    })
-    .controller('main', ['$scope', '$location', '$http', '$storage', function($scope, $location, $http, $storage) {
+.controller('main', ['$scope', '$location', '$http', '$storage',function($scope, $location, $http, $storage) {
         $scope.page = 'Pokedex';
         $scope.pokemon = $storage.get('pkmn') || [];
         if (!$scope.pokemon.length) {
             $http.get('js/pkmn.json')
                 .success(function(data) {
-                   $storage.set('pkmn',data);
-                   $scope.pokemon = data;
+                    $storage.set('pkmn', data);
+                    $scope.pokemon = data;
                 })
         }
         $scope.getInfo = function(pkmn) {
@@ -53,27 +15,11 @@ var app = angular.module('pokedex', ['ngRoute', 'ngAnimate'])
         $scope.close = function() {
             $scope.isOpen = false
         };
-        $scope.open = function(){
+        $scope.open = function() {
             $scope.isOpen = true
         };
         $scope.hideInfo = function() {
             $location.path('')
         };
-    }])
-    .controller('informacion',['$scope','$routeParams','$http', function($scope, $routeParams, $http){
-        $scope.isOpen = true;
-        $scope.Math   = window.Math;
-        $scope.id     = parseInt($routeParams.tagId,10)
-
-        $http.get('http://pokeapi.co/api/v1/description/' + $scope.id)
-            .success(function(data) {
-                $scope.descripcion = data.description
-            });
-
-        $http.get('http://pokeapi.co/api/v1/pokemon/' + $scope.id)
-            .success(function(data) {
-               $scope.pkmn = data;
-            });
-
-
-    }])
+    }
+])

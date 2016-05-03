@@ -195,7 +195,8 @@
   float: left;
 }
 .pokedex .pokemon-attributes {
-  width: 17em;
+  width: 45%;
+  float: left;
   margin: 0.5em;
   display: inline-block;
 }
@@ -234,7 +235,7 @@
 }
 .pokedex .pokemon-stats {
   display: inline-block;
-  width: 50%;
+  width: 45%;
   margin: 0.5em;
 }
 .pokedex .pokemon-stats .gauge {
